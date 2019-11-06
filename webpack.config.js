@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   
@@ -28,8 +27,8 @@ module.exports = {
   },
   plugins: [	
      new HtmlWebpackPlugin({
-       filename: 'main.html',
-       template: './src/pages/main.pug'
+       filename: 'index.html',
+       template: './src/pages/index.pug'
      }),
  	  ],
   output: {
