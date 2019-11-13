@@ -1,4 +1,6 @@
 header.main-header
-  a.main-header__logo
-    img.main-header__img
-  include ../main-nav/main-nav.pug
+  .main-header__container
+    a.main-header__logo
+      img.main-header__img(src=require("../images/Logo.png") width="106" height="40")
+    block main-nav
+      include ../main-nav/main-nav.pug

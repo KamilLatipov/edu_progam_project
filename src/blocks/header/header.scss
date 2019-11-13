@@ -1,0 +1,15 @@
+.main-header {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    width: 1236px;
+    margin: 0 auto;
+
+  }
+  
+  &__logo {
+    margin-right: auto;
+    padding-top: 15px;
+  }
+}

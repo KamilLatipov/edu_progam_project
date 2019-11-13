@@ -1,0 +1,48 @@
+@import '../../pages/color.scss';
+
+.main-nav {
+  display: flex;
+  width: 769px;
+
+  margin-bottom: 10px;
+  padding-top: 27px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 446px;
+
+    color: $dark-shade-50;
+  }
+
+  &__item {
+    margin-left: 25px;
+  }
+
+  &__account {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+  }
+
+  &__enter {
+    padding: 9px 20px;
+
+    border: 2px solid;
+    border-color: $gradient;
+    border-radius: 22px;
+
+    color: $purple;
+  }
+
+  &__registration {
+    padding: 9px 20px;
+
+    border-radius: 22px;
+    background-image: $gradient;
+
+    color: white;
+  }
+}
