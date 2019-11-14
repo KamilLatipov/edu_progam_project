@@ -3,13 +3,14 @@
 
   &__container {
     display: flex;
-    width: 1236px;
-    margin: 0 auto;
-
+    flex-wrap: wrap;
+    width: 1160px;
+    margin: 0 140px;
   }
   
   &__logo {
-    margin-right: auto;
+    flex-grow: 0.5;
+    margin-left: auto;
     padding-top: 15px;
   }
 }

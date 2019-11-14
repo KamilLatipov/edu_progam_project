@@ -29,7 +29,7 @@ module.exports = {
       },
         {
             test: /\.(woff|woff2|eot|ttf|svg)$/,
-            loader: 'file?name=fonts/[name].[ext]'
+            loader: 'file-loader?name=fonts/[name].[ext]',
         },
     ],
   },
