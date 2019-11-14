@@ -1,0 +1,16 @@
+.main-header {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1160px;
+    margin: 0 140px;
+  }
+  
+  &__logo {
+    flex-grow: 0.5;
+    margin-left: auto;
+    padding-top: 15px;
+  }
+}
