@@ -1,0 +1,26 @@
+.main-footer {
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 140px;
+  }
+
+  &__best {
+    width: 260px;
+  }
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 260px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+}
