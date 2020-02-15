@@ -1,0 +1,29 @@
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 580px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+
+  }
+
+  &__item {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+}
