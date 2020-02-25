@@ -1,9 +1,36 @@
+include ../blocks/header/header.pug
+
 doctype html
 html
   head
     title I'm a title
   body
     block header
+      header.main-header
+        +header({
+          nav: [
+            {
+              name: "О наc",
+              link: "index1.pug",
+            },
+            {
+              name: "Услуги",
+              link: "#",
+            },
+            {
+              name: "Вакансии",
+              link: "#",
+            },
+            {
+              name: "Новости",
+              link: "#",
+            },
+            {
+              name: "Соглашения",
+              link: "#",
+            }
+          ]
+        })
 
     block content
 
