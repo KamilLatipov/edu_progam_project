@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-.main-footer__best {
+.footer__best {
     width: 260px;
 }
 
-.main-footer__subscribe {
+.footer__subscribe {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,18 +10,18 @@
   width: 260px;
 }
 
-.main-footer__title {
+.footer__title {
   margin: 0;
 }
 
-.main-footer__wrapper {
+.footer__wrapper {
   display: flex;
   justify-content: space-between;
 
   margin: 0 140px;
 }
 
-.main-footer__mail {
+.footer__mail {
   width: 245px;
   height: 44px;
 
@@ -30,31 +29,4 @@
 
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-=======
-.main-footer {
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    margin: 0 140px;
-  }
-
-  &__best {
-    width: 260px;
-  }
-
-  &__subscribe {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 260px;
-  }
-
-  &__title {
-    margin: 0;
-  }
-
->>>>>>> 239c6f951a7be8424dde233ce25bb7c8c28bcac1
 }

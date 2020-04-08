@@ -1,4 +1,5 @@
 include ../blocks/header/header.pug
+include ../blocks/footer/footer.pug
 
 doctype html
 html
@@ -35,4 +36,33 @@ html
     block content
 
     block footer
-      include ../blocks/footer/footer.pug
+      footer.footer
+        +footer({
+          nav: [
+            {
+              title: "Навигация",
+              links: [
+                {name: "О нас", link: "#"},
+                {name: "Новости", link: "#"},
+                {name: "Служба поддержки", link: "#"},
+                {name: "Услуги", link: "#"},
+              ],
+            },
+            {
+              title: "О нас",
+              links: [
+                {name: "О сервисе", link: "#"},
+                {name: "Наша команда", link: "#"},
+                {name: "Вакансии", link: "#"},
+                {name: "Инвесторы", link: "#"},
+              ],
+            },
+            {
+              title: "Служба поддержки",
+              links: [
+                {name: "Соглашения", link: "#"},
+                {name: "Сообщества", link: "#"},
+                {name: "Связь с нами", link: "#"},
+              ],
+            }, ]
+        })
