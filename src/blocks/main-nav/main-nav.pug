@@ -1,8 +1,7 @@
 mixin main-nav(nav)
-  nav.main-nav
-    .main-nav__list
-      each item in nav
-        a.main-nav__item(href="item.link")= item.name
-    .main-nav__account
-      a.main-nav__enter.main-nav__item Войти
-      a.main-nav__registration.main-nav__item  Зарегистрироваться
+  .main-nav__list
+    each item in nav
+      a.main-nav__item(href=item.link)= item.name
+  .main-nav__account
+    a.main-nav__enter.main-nav__item Войти
+    a.main-nav__registration.main-nav__item  Зарегистрироваться
