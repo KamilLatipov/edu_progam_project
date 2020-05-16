@@ -1,37 +1,4 @@
 extends layout
-
-include ../blocks/search-page/dropdown/dropdown
-
 block content
-    sidebar.search-page
-        form.search-page__filter
-            .search-page__dropdowns
-                +checkbox("Дата пребывания в отеле")
-                +checkbox("Гости")
-            .search-page__slider
-                h3.search-page__title Диапазон цены
-                input.slider
-                p.slider__info
-            .search-page__checkbox
-                h3.seacrh-page__title CHECKBOX BUTTON
-                input(type="checkbox" id="smoke-status" name="scales")
-                label(for="smoke-status") Можно курить
-                input(type="checkbox" id="pet-status" name="scales")
-                label(for="pet-status") Можно с питомцами
-                input(type="checkbox" id="guest-status" name="scales")
-                label(for="guest-status") Можно пригласить гостей (до 10 человек)
-            .search-page__availability
-                h3.search-page__title Доступность
-                div.availability__item
-                    input(type="checkbox" id="wide-corridor" name="scales")
-                    label(for="wide-corridor") Широкий коридор
-                    p.availablitity__info Ширина коридоров в номере не менее 91 см.
-                div.availability__item
-                    input(type="checkbox" id="help" name="scales")
-                    label(for="help") Помощник для инвалидов
-                    p.availablitity__info На 1 этаже вас встретит специалист и проводит до номера.
-            .search-page__dropdowns
-                h3.search-page__title Удобства номера
-                    input.search-page__dropdown
-            .search-page__checkbox
-                h3.search-page__title Дополнительные удобства
+  .landing
+    include ../blocks/search-card/search-card.pug
