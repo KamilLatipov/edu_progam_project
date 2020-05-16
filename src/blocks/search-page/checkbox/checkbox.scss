@@ -1,23 +1,31 @@
 @import "../../../style/color.scss";
 
+.checkbox__wrapper {
+  margin-bottom: 12px;
+}
+
 .checkbox__subtext {
   width: 225px;
 
+  margin-bottom: 5px;
   padding-left: 35px;
 
   color: $dark-shade-50;
+  line-height: 14px;
 }
 
 .checkbox__label {
   display: block;
 
+  width: 203px;
+
   position: relative;
 
-  margin-bottom: 12px;
   padding-left: 35px;
 
   cursor: pointer;
   color: $dark-shade-50;
+  line-height: 20px;
 
   &--title {
     color: $dark-shade-75;

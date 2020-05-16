@@ -1,0 +1,12 @@
+mixin room-card({index, isLuxury, price, rating, comments})
+  .room-card
+    img.room-card__img
+    .room-card__info
+      .room-card__row
+        .room-card__index
+          p.room-card__number= index
+          if ( isLuxury )
+            p.room-card__luxury  люкс
+      .room-card__row
+        .room-card__rating
+        .room-card__comments

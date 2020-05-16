@@ -4,45 +4,49 @@ include ../blocks/search-page/dropdown/dropdown
 include ../blocks/search-page/checkbox/checkbox
 
 block content
-    sidebar.search-page
-        form.search-page__filter
-            .search-page__dropdowns
-                +dropdown("Дата пребывания в отеле")
-                +dropdown("Гости")
-            .search-page__slider
-                h3.search-page__title Диапазон цены
-                input.slider
-                p.slider__info
-            .search-page__checkbox
-                +checkbox({
-                    title: "CHECKBOX BUTTONS",
-                    items: [
-                        {
-                          text: "Можно курить"
-                        },
-                        {
-                            text: "Можно с питомцами"
-                        },
-                        {
-                            text: "Можно пригласить гостей(до 10 человек)"
-                        }
-                    ]
-                })
-            .search-page__availability
-                +checkbox({
-                    title: "Доступность",
-                    items: [
-                        {
-                            text: "Широкий коридор",
-                            subtext: "Ширина коридоров в номере не менее 91 см."
-                        },
-                        {
-                            text: "Помощник для инвалидов",
-                            subtext: "На 1 этаже вас встретит специалист и проводит до номера."
-                        },
-                    ]
-                })
-            .search-page__dropdowns
-                +dropdown("Гости")
-            .search-page__checkbox
-                h3.search-page__title Дополнительные удобства
+  .search-page
+    .search-page__panel
+      form.search-page__filter
+        .search-page__dropdowns
+          +dropdown("Дата пребывания в отеле")
+          +dropdown("Гости")
+        .search-page__slider
+          h3.search-page__title Диапазон цены
+          input.slider
+          p.slider__info
+        .search-page__checkbox
+          +checkbox({
+            title: "CHECKBOX BUTTONS",
+            items: [
+              {
+                text: "Можно курить"
+              },
+              {
+                text: "Можно с питомцами"
+              },
+              {
+                text: "Можно пригласить гостей (до 10 человек)"
+              }
+            ]
+          })
+        .search-page__availability
+          +checkbox({
+            title: "Доступность",
+            items: [
+              {
+                text: "Широкий коридор",
+                subtext: "Ширина коридоров в номере не менее 91 см."
+              },
+              {
+                text: "Помощник для инвалидов",
+                subtext: "На 1 этаже вас встретит специалист и проводит до номера."
+              },
+            ]
+          })
+        .search-page__dropdowns
+          +dropdown("Удобства номера")
+        .search-page__checkbox
+          h3.search-page__title Дополнительные удобства
+    section.search-page__main
+      h1.search-page__title  Номера, которые мы для вас подобрали
+      .search-page__card-list
