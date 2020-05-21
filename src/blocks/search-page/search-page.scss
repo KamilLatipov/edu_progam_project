@@ -1,7 +1,17 @@
 .search-page {
   display: flex;
+  justify-content: space-between;
 
-  width: 1160px;
+  width: 1220px;
 
-  margin: 0 auto;
+  margin: 0 140px;
+}
+
+.search-page__main {
+  width: 850px;
+}
+
+.search-page__card-list {
+  display: flex;
+  flex-wrap: wrap;
 }

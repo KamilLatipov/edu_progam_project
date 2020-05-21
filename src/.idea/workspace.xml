@@ -2,8 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3fc627b-8151-4dd6-a5ee-0c7d2a2f8589" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blocks/main-nav/main-nav.pug" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/main-nav/main-nav.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Montserrat-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/fonts/Quicksand-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/images/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/images/Montserrat-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/images/Montserrat-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/images/Quicksand-Bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/images/Quicksand-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/room-card/room-card.pug" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/room-card/room-card.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/search-page/checkbox/checkbox.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/search-page/checkbox/checkbox.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/search-page/dropdown/dropdown.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/search-page/dropdown/dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/search-page/search-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/search-page/search-page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/search-page.pug" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search-page.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/global.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +54,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Vue-NoteApp" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,6 +82,12 @@
       <option name="presentableId" value="Default" />
       <updated>1586598092801</updated>
       <workItem from="1586598116248" duration="143000" />
+      <workItem from="1589664164448" duration="388000" />
+      <workItem from="1589718629764" duration="133000" />
+      <workItem from="1589886805879" duration="6421000" />
+      <workItem from="1589894830133" duration="1553000" />
+      <workItem from="1589984186474" duration="751000" />
+      <workItem from="1589984995292" duration="14000" />
     </task>
     <servers />
   </component>
@@ -55,9 +95,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="112" key="FileChooserDialogImpl" timestamp="1586598264100">
+    <state x="499" y="112" key="FileChooserDialogImpl" timestamp="1589985007671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="112" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586598264100" />
+    <state x="499" y="112" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589985007671" />
+    <state x="176" y="0" key="SettingsEditor" timestamp="1589894988286">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="176" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589894988286" />
+    <state x="-190" y="95" width="1336" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589891061381">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-190" y="95" width="1336" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589891061381" />
   </component>
 </project>

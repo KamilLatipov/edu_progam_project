@@ -1,12 +1,20 @@
-mixin room-card({index, isLuxury, price, rating, comments})
-  .room-card
-    img.room-card__img
-    .room-card__info
-      .room-card__row
-        .room-card__index
-          p.room-card__number= index
-          if ( isLuxury )
-            p.room-card__luxury  люкс
-      .room-card__row
-        .room-card__rating
-        .room-card__comments
+mixin room-card({list})
+  each item in list
+    .room-card
+      img.room-card__img
+      .room-card__info
+        .room-card__row
+          .room-card__cell
+            p.room-card__number--text № &nbsp;
+            p.room-card__number= item.number
+            if ( item.isLuxury )
+              p.room-card__luxury &nbsp; люкс
+          .room-card__cell
+            p.room-card__price= item.price
+            p.room-card__price--text &nbsp; в сутки
+        .room-card__row
+          .room-card__cell
+            p.room-card__rating= item.rating
+          .room-card__cell
+            p.room-card__comments= item.comments
+            p.room-card__comments--text &nbsp; Отзывов

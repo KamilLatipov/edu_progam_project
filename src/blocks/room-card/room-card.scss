@@ -1,0 +1,86 @@
+@import "../../style/color.scss";
+
+.room-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 270px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+
+.room-card__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 90%;
+}
+
+.room-card__row {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.room-card__cell {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  width: 47%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.room-card__number {
+  font-family: "Quicksand Bold";
+  font-weight: bold;
+  font-size: 14px;
+  color: $dark-shade-100;
+
+  &--text {
+    font-family: "Quicksand Bold";
+    font-weight: bold;
+    font-size: 14px;
+    color: $dark-shade-100;
+  }
+}
+
+.room-card__luxury {
+  vertical-align: bottom;
+
+  font-family: "Montserrat Bold";
+  font-size: 12px;
+  font-weight: bold;
+  color: $purple;
+  text-transform: uppercase;
+}
+
+.room-card__price {
+  font-weight: bold;
+  font-size: 14px;
+  color: $dark-shade-50;
+
+  &--text {
+    font-size: 13px;
+    color: $dark-shade-50;
+  }
+}
+
+.room-card__comments {
+  font-weight: bold;
+  font-size: 14px;
+  color: $dark-shade-50;
+
+  &--text {
+    font-size: 13px;
+    color: $dark-shade-50;
+  }
+}
