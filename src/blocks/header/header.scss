@@ -4,8 +4,10 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
-    width: 1160px;
-    margin: 0 140px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
   }
   
   &__logo {

@@ -2,11 +2,9 @@
 @import '../blocks/checkbox/checkbox.scss';
 @import '../blocks/room-card/room-card.scss';
 @import '../blocks/search-page/search-page.scss';
+@import '../blocks/pagination/pagination.scss';
 
 body {
-  width: 1440px;
-  margin: 0 auto;
-
   font-family: 'Montserrat' , sans-serif;
   font-size: 14px;
   color: $dark-shade-75;

@@ -1,0 +1,56 @@
+@import "../../style/color.scss";
+
+.pagination {
+  display: flex;
+
+  width: 260px;
+
+  font-size: 12px;
+  line-height: 15px;
+  color: $dark-shade-50;
+}
+
+.pagination__items {
+  display: flex;
+}
+
+.pagination__item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0;
+
+  border-radius: 22px;
+
+  &--active {
+    color: white;
+    background: $gradient;
+  }
+}
+
+.pagination__total {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0;
+}
+
+.pagination__next-page {
+  font-family: 'Material Icons';
+  
+  font-size: 24px;
+  line-height: 20px;
+  color: white;
+
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}

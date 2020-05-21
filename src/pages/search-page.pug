@@ -3,6 +3,7 @@ extends layout
 include ../blocks/dropdown/dropdown
 include ../blocks/checkbox/checkbox
 include ../blocks/room-card/room-card
+  include ../blocks/pagination/pagination
 
 block content
   .search-page
@@ -140,4 +141,22 @@ block content
           ]
         })
       .search-page__pagination
-        
+        +pagination({
+          pages: [
+            {
+              link: '#',
+              number: 1,
+              isActive: true
+            },
+            {
+              link: '#',
+              number: 2,
+            },
+            {
+              link: '#',
+              number: 3,
+            },
+          ],
+          total: 15,
+          text: '1 – 12 из 100+ вариантов аренды'
+        })

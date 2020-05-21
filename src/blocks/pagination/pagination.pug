@@ -1,0 +1,11 @@
+mixin pagination({pages, total, text})
+  .pagination
+    .pagination__items
+      each item in pages
+        - let pagination = ["pagination__item"]
+        if item.isActive
+          - pagination.push("pagination__item--active")
+        a(class=pagination href=item.link)= item.number
+    p.pagination__item ...
+    p.pagination__total= total
+    a.pagination__next-page.pagination__item arrow_forward

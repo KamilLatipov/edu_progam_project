@@ -30,3 +30,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('../fonts/material_icons/material-icons-regular.woff2') format('woff2'),
+    url('../fonts/material_icons/material-icons-regular.woff') format('woff'),
+    url('../fonts/material_icons/material-icons-regular.ttf') format('opentype'),
+    url('../fonts/material_icons/material-icons-regular.svg') format('svg');
+}

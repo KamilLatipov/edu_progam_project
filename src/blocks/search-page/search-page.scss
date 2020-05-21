@@ -2,16 +2,32 @@
   display: flex;
   justify-content: space-between;
 
-  width: 1220px;
+  max-width: 1200px;
 
-  margin: 0 140px;
+  margin: 0 auto;
 }
 
 .search-page__main {
-  width: 850px;
+  width: 70%;
+}
+
+.search-page__panel {
+  width: 30%;
 }
 
 .search-page__card-list {
   display: flex;
   flex-wrap: wrap;
+
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.search-page__pagination {
+  display: flex;
+
+  max-width: 230px;
+
+  margin: 0 auto;
 }
