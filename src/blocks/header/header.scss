@@ -1,11 +1,18 @@
+@import "../../style/color.scss";
+
 .main-header {
   width: 100%;
+
+  margin-top: 20px;
+
+  box-shadow: 0px 10px 20px $dark-shade-5;
 
   &__container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
-    max-width: 1200px;
+    max-width: 1170px;
 
     margin: 0 auto;
   }
@@ -13,6 +20,5 @@
   &__logo {
     flex-grow: 0.5;
     margin-left: auto;
-    padding-top: 15px;
   }
 }

@@ -2,17 +2,19 @@
   display: flex;
   justify-content: space-between;
 
-  max-width: 1200px;
+  max-width: 1170px;
 
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .search-page__main {
-  width: 70%;
+  width: 72%;
+
+  margin-top: 12px;
 }
 
 .search-page__panel {
-  width: 30%;
+  width: 28%;
 }
 
 .search-page__card-list {

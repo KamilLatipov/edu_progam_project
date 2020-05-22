@@ -5,7 +5,7 @@
 @import '../blocks/pagination/pagination.scss';
 
 body {
-  font-family: 'Montserrat' , sans-serif;
+  font-family: 'Montserrat', 'Montserrat Bold' , sans-serif;
   font-size: 14px;
   color: $dark-shade-75;
   line-height: 24px;
@@ -17,22 +17,32 @@ a {
 }
 
 h1 {
+  font-family: 'Quicksand', 'Quicksand Bold', sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 28px;
+
+  color: $dark-shade-100;
+
+  margin: 0;
 }
 
 h2 {
   font-size: 19px;
   font-weight: bold;
   line-height: 22px;
+
+  color: $dark-shade-100;
 }
 
 h3 {
+  font-family: 'Monserrat', 'Montserrat Bold', sans-serif;
   font-size: 12px;
   font-weight: bold;
   line-height: 15px;
   text-transform: uppercase;
+
+  color: $dark-shade-100;
 }
 
 ul {
