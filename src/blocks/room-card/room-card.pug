@@ -1,17 +1,17 @@
 mixin room-card({list})
   each item in list
     .room-card
-      img.room-card__img
+      img.room-card__img(src=require(`../images/${item.link}`))
       .room-card__info
-        .room-card__row
+        .room-card__row.room-card__line
           .room-card__cell
-            p.room-card__number.room-card__number--text № &nbsp;
-            p.room-card__number= item.number
+            span.room-card__number.room-card__number--text №
+            span.room-card__number= item.number
             if ( item.isLuxury )
-              p.room-card__luxury &nbsp; люкс
+              span.room-card__luxury люкс
           .room-card__cell
-            p.room-card__price= item.price
-            p.room-card__price--text &nbsp; в сутки
+            span.room-card__price= item.price
+            span.room-card__price--text &nbsp; в сутки
         .room-card__row
           .room-card__cell
             p.room-card__rating= item.rating
