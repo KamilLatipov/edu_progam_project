@@ -3,8 +3,6 @@
 .main-header {
   width: 100%;
 
-  margin-top: 10px;
-
   box-shadow: 0px 10px 20px $dark-shade-5;
 
   &__container {
@@ -15,10 +13,14 @@
     max-width: 1170px;
 
     margin: 0 auto;
+    padding: 15px 0;
   }
   
   &__logo {
+    display: flex;
     flex-grow: 0.5;
+    align-items: center;
+
     margin-left: auto;
   }
 }
