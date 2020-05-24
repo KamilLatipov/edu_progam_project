@@ -2,22 +2,23 @@
   display: flex;
   justify-content: space-between;
 
-  width: 580px;
+  width: 48%;
 
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
     margin: 0;
     padding: 0;
+
+    width: 29%;
   }
 
   &__item {
-    padding-top: 20px;
+    margin-top: 14px;
 
     &:first-child {
-      padding-top: 0;
+      margin-top: 0;
     }
   }
 
