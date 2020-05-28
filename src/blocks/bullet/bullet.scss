@@ -1,0 +1,24 @@
+@import '../../style/color.scss';
+
+.bullet__list {
+  padding: 0;
+}
+
+.bullet__item {
+  position: relative;
+
+  width: 70%;
+
+  padding-bottom: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    background-color: $dark-shade-25;
+    border-radius: 50%;
+  }
+}

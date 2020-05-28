@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  max-width: 70%;
+  max-width: 65%;
 }
 
 .room-detail__information {
@@ -29,9 +29,15 @@
 }
 
 .room-detail__bullet {
-  width: 50%;
+  width: 45%;
+
+  margin-left: 20px;
 }
 
 .room-detail__decline {
   width: 50%;
+}
+
+.room-detail__text {
+  width: 90%;
 }
