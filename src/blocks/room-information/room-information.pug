@@ -1,0 +1,8 @@
+mixin room-information({list})
+  .room-information
+    each item in list
+      .room-information__item
+        .room-information__icon= item.icon
+        .room-information__texts
+          p.room-information__title= item.title
+          p.room-information__text= item.text

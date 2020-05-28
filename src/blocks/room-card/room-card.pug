@@ -1,11 +1,11 @@
 mixin room-card({list})
   each item in list
     .room-card
-      img.room-card__img(src=require(`../images/${item.link}`))
+      img.room-card__img(src=require(`../../images/${item.link}`))
       .room-card__info
         .room-card__row.room-card__line
           .room-card__cell
-            span.room-card__number.room-card__number--text №
+            span.room-card__number.room-card__number--text № &nbsp;
             span.room-card__number= item.number
             if ( item.isLuxury )
               span.room-card__luxury люкс

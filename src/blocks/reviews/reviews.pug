@@ -1,0 +1,15 @@
+include ../like-button/like-button
+
+mixin reviews({list})
+  .reviews
+    each item in list
+      .reviews__item
+        .reviews__icons
+          img.reviews__image(src=require(`../../images/${item.link}`))
+          .reviews__like
+            +like-button(item.likeCount, item.isClicked)
+        .reviews__texts
+          .reviews__title-wrapper
+            p.reviews__title= item.name
+            p.reviews__date= item.date
+          p.reviews__text= item.text

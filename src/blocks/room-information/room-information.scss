@@ -1,0 +1,51 @@
+@import '../../style/color.scss';
+
+.room-information__title {
+  font-weight: bold;
+}
+
+.room-information__icon {
+  display: flex;
+  align-items: center;
+
+  height: 48px;
+  width: 48px;
+
+  margin-right: 10px;
+
+  font-family: 'Material Icons';
+  font-size: 48px;
+
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room-information__item {
+  display: flex;
+
+  align-items: center;
+
+  padding: 19px 0;
+
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $dark-shade-10;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.room-information__texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-information__title {
+  margin: 0;
+}
+
+.room-information__text {
+  margin: 0;
+}

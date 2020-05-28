@@ -1,0 +1,11 @@
+mixin like-button(likeCount, isClicked)
+  if isClicked
+    .like-button.like-button__clicked
+      .like-button__wrapper
+        p.like-button__icon favorite &nbsp;
+        p.like-button__count= likeCount
+  else
+    .like-button
+      .like-button__wrapper
+        p.like-button__icon favorite_border &nbsp;
+        p.like-button__count= likeCount
