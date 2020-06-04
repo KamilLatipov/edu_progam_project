@@ -8,9 +8,10 @@
 @import '../blocks/reviews/reviews.scss';
 @import '../blocks/like-button/like-button.scss';
 @import '../blocks/bullet/bullet.scss';
+@import '../blocks/book-card/book-card.scss';
 
 body {
-  font-family: 'Montserrat', 'Montserrat Bold' , sans-serif;
+  font-family: Montserrat, OpenSans, sans-serif;
   font-size: 14px;
   color: $dark-shade-75;
   line-height: 24px;
@@ -24,7 +25,7 @@ a {
 }
 
 h1 {
-  font-family: 'Quicksand', 'Quicksand Bold', sans-serif;
+  font-family: Quicksand, OpenSans, sans-serif;
   font-size: 25px;
   font-weight: bold;
   line-height: 28px;
@@ -35,21 +36,25 @@ h1 {
 }
 
 h2 {
-  font-family: 'Quicksand', 'Quicksand Bold', sans-serif;
+  font-family: Quicksand, OpenSans, sans-serif;
   font-size: 19px;
   font-weight: bold;
   line-height: 22px;
 
   color: $dark-shade-100;
+
+  margin: 0;
 }
 
 h3 {
-  font-family: 'Montserrat', 'Montserrat Bold', sans-serif;
+  font-family: Montserrat, OpenSans, sans-serif;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 
   color: $dark-shade-100;
+
+  margin: 0;
 }
 
 ul {

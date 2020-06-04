@@ -1,0 +1,26 @@
+mixin book-card(number, price)
+  .book-card
+    .book-card__container
+      .book-card__info
+        .book-card__cell
+          span.book-card__number.book-card__number--text № &nbsp;
+          span.book-card__number= number
+          span.book-card__luxury люкс
+        .book-card__cell
+          span.book-card__price= price
+          span.book-card__price--text в рублях
+      .book-card__calender
+      .book-card__guests
+      .book-card__bill
+        .book-card__row
+          p.book-card__cell 9 990₽ х 4 суток
+          p.book-card__cell 39 960₽
+        .book-card__row
+          p.book-card__cell Сбор за услуги: скидка 2 179₽
+          p.book-card__cell 0₽
+        .book-card__row
+          p.book-card__cell Сбор за дополнительные услуги
+          p.book-card__cell 300₽
+        .book-card__row
+          p.book-card__cell Итого
+          p.book-card__cell 38 081₽

@@ -3,6 +3,7 @@ extends ../layout
 include ../../blocks/room-information/room-information
 include ../../blocks/reviews/reviews
 include ../../blocks/bullet/bullet
+include ../../blocks/book-card/book-card
 
 block content
   .room-detail
@@ -50,7 +51,7 @@ block content
                 likeCount: '2',
                 isClicked: false,
                 link: 'avatar-2.png',
-                name: 'Удобство',
+                name: 'Патрисия Стёклышкова',
                 date: 'Неделю назад',
                 text: 'Обслуживание на высоте! ' +
                         'Всё аккуратно, чисто. ' +
@@ -77,3 +78,4 @@ block content
           h2.room-detail__title Отмена
           p.room-detail__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-detail__book
+        +book-card('888', '9990')
