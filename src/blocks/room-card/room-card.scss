@@ -1,4 +1,4 @@
-@import "../../style/color.scss";
+@import '../../style/color.scss';
 
 .room-card {
   display: flex;
@@ -47,44 +47,6 @@
   display: flex;
 
   align-items: baseline;
-}
-
-.room-card__number {
-  margin: 0;
-  padding-left: 5px;
-
-  font-family: 'Montserrat', 'Montserrat Bold', sans-serif;
-  font-weight: bold;
-  font-size: 17.4px;
-  color: $dark-shade-100;
-
-  &--text {
-    padding-left: 0;
-
-    font-size: 12px;
-  }
-}
-
-.room-card__luxury {
-  margin: 0;
-  padding-left: 4px;
-
-  font-family: 'Montserrat','Montserrat Bold', 'sans-serif';
-  font-size: 12px;
-  font-weight: bold;
-  color: $purple;
-  text-transform: uppercase;
-}
-
-.room-card__price {
-  font-weight: bold;
-  font-size: 14px;
-  color: $dark-shade-50;
-
-  &--text {
-    font-size: 12px;
-    color: $dark-shade-50;
-  }
 }
 
 .room-card__rating {

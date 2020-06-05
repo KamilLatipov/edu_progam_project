@@ -1,0 +1,9 @@
+mixin room-number(number, isLuxury, price)
+  .room-number__cell
+    span.room-number__number.room-number__number--text №
+    span.room-number__number= number
+    if (isLuxury)
+      span.room-number__luxury люкс
+  .room-number__cell
+    span.room-number__price= price
+    span.room-number__price.room-number__price--text в сутки

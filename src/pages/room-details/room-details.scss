@@ -11,7 +11,7 @@
 .room-detail__about {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
 
   max-width: 65%;
 }
@@ -26,6 +26,8 @@
 
 .room-detail__reviews {
   width: 100%;
+
+  margin: 15px 0;
 }
 
 .room-detail__bullet {
@@ -35,7 +37,7 @@
 }
 
 .room-detail__decline {
-  width: 50%;
+  width: 48%;
 }
 
 .room-detail__text {

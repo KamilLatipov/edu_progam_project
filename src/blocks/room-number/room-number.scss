@@ -1,0 +1,52 @@
+@import '../../style/color.scss';
+
+.room-number__number {
+  margin: 0;
+  padding-left: 4px;
+
+  font-family: Quicksand, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: $dark-shade-100;
+
+  &--text {
+    padding-left: 0;
+
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.room-number__luxury {
+  margin: 0;
+  padding-left: 5px;
+
+  font-family: Montserrat, 'sans-serif';
+  font-size: 12px;
+  font-weight: bold;
+  color: $purple;
+  text-transform: uppercase;
+}
+
+.room-number__cell {
+  display: flex;
+  align-items: baseline;
+}
+
+.room-number__price {
+  align-self: flex-end;
+
+  padding-right: 4px;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: $dark-shade-50;
+
+  &--text {
+    padding-right: 0;
+
+    font-size: 12px;
+    font-weight: normal;
+    color: $dark-shade-50;
+  }
+}

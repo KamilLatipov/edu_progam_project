@@ -11,11 +11,15 @@
 
   width: 94%;
 
-  padding-bottom: 20px;
+  padding-bottom: 22px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
 }
 
 .reviews__icons {
-  width: 9%;
+  width: 8%;
 }
 
 .reviews__image {

@@ -1,14 +1,10 @@
+include ../room-number/room-number
+
 mixin book-card(number, price)
   .book-card
     .book-card__container
       .book-card__info
-        .book-card__cell
-          span.book-card__number.book-card__number--text № &nbsp;
-          span.book-card__number= number
-          span.book-card__luxury люкс
-        .book-card__cell
-          span.book-card__price= price
-          span.book-card__price--text в рублях
+        +room-number(number, true, price)
       .book-card__calender
       .book-card__guests
       .book-card__bill
