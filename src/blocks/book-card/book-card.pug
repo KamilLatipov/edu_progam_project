@@ -2,7 +2,7 @@ include ../room-number/room-number
 
 mixin book-card(number, price)
   .book-card
-    .book-card__container
+    form.book-card__container
       .book-card__info
         +room-number(number, true, price)
       .book-card__calender
@@ -10,13 +10,14 @@ mixin book-card(number, price)
       .book-card__bill
         .book-card__row
           p.book-card__cell 9 990₽ х 4 суток
-          p.book-card__cell 39 960₽
+          p.book-card__total 39 960₽
         .book-card__row
           p.book-card__cell Сбор за услуги: скидка 2 179₽
-          p.book-card__cell 0₽
+          p.book-card__total 0₽
         .book-card__row
           p.book-card__cell Сбор за дополнительные услуги
-          p.book-card__cell 300₽
-        .book-card__row
-          p.book-card__cell Итого
-          p.book-card__cell 38 081₽
+          p.book-card__total 300₽
+        .book-card__last-row
+          h2.book-card__text Итого
+          .book-card__line
+          h2.book-card__total 38 081₽
