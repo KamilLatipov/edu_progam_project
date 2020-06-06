@@ -1,6 +1,7 @@
 include ../room-number/room-number
+include ../long-button/long-button
 
-mixin book-card(number, price)
+mixin book-card(number, price, buttonName)
   .book-card
     form.book-card__container
       .book-card__info
@@ -12,12 +13,14 @@ mixin book-card(number, price)
           p.book-card__cell 9 990₽ х 4 суток
           p.book-card__total 39 960₽
         .book-card__row
-          p.book-card__cell Сбор за услуги: скидка 2 179₽
+          p.book-card__cell.book-card__more-details Сбор за услуги: скидка 2 179₽
           p.book-card__total 0₽
         .book-card__row
-          p.book-card__cell Сбор за дополнительные услуги
+          p.book-card__cell.book-card__more-details.book-card__cell--last Сбор за дополнительные услуги
           p.book-card__total 300₽
         .book-card__last-row
           h2.book-card__text Итого
           .book-card__line
           h2.book-card__total 38 081₽
+      .book-card__button
+        +long-button(buttonName)

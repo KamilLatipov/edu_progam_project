@@ -1,3 +1,5 @@
+@import '../../style/color.scss';
+
 .book-card {
   display: flex;
   justify-content: center;
@@ -28,24 +30,60 @@
 
   width: 100%;
 
-  margin-bottom: 11px;
-}
-
-.book-card__cell {
-  width: 70%;
+  margin-bottom: 10px;
 }
 
 .book-card__last-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
+  margin-top: 35px;
+}
+
+.book-card__more-details {
+  position: relative;
+
+  &::after {
+    content: 'i';
+
+    position: absolute;
+
+    top: 0;
+    right: -10px;
+
+    width: 19px;
+    height: 19px;
+
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    color: $dark-shade-25;
+
+    text-align: center;
+
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+  }
+}
+
+.book-card__cell {
+  width: 72%;
+
+  &--last {
+    line-height: 18px;
+  }
 }
 
 .book-card__line {
-
   width: 56%;
   height: 1px;
 
   border-top: 1px dashed rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
+}
+
+.book-card__button {
+  margin-top: 20px;
 }

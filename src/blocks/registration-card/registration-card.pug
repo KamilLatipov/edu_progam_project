@@ -1,0 +1,9 @@
+include ../text-field/text-field
+
+mixin registration-card(email, Email)
+  .registration-card
+    .registration-card__container
+      h1.registration-card__title Регистрация аккаунта
+      form.registration-card__form(method='post')
+        .registration-card__item
+          +text-field(email, Email)
