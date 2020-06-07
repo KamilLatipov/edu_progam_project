@@ -1,9 +1,33 @@
 include ../text-field/text-field
+include ../radio-buttons/radio-buttons
+include ../toggle/toggle
 
-mixin registration-card(email, Email)
+mixin registration-card
   .registration-card
     .registration-card__container
       h1.registration-card__title Регистрация аккаунта
-      form.registration-card__form(method='post')
-        .registration-card__item
-          +text-field(email, Email)
+      form.registration-card__form(method= 'post')
+        .registration-card__block
+          .registration-card__item
+            +text-field('text', 'Имя')
+          .registration-card__item
+            +text-field('text', 'Фамилия')
+          .registration-card__item
+            +radio-buttons({
+              list: [
+                {label: 'Мужчина', name: 'gender', isChecked: true},
+                {label: 'Женщина', name: 'gender'}
+              ]
+            })
+        .registration-card__block
+          h3.registration-card__subtitle Дата рождения
+          .registration-card__item
+            +text-field('text', 'ДД.ММ.ГГГГ')
+        .registration-card__block
+          h3.registration-card__subtitle Данные для входа в сервис
+          .registration-card__item
+            +text-field('email', 'Email')
+          .registration-card__item
+            +text-field('password', 'Пароль')
+          .registration-card__item
+            +toggle('Получать спецпредложения')

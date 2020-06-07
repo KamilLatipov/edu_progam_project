@@ -2,6 +2,7 @@
 @import '../blocks/checkbox/checkbox.scss';
 @import '../blocks/room-card/room-card.scss';
 @import '../pages/search-page/search-page.scss';
+@import '../pages/registration/registration';
 @import '../blocks/pagination/pagination.scss';
 @import '../pages/room-details/room-details.scss';
 @import '../blocks/room-information/room-information.scss';
@@ -12,6 +13,9 @@
 @import '../blocks/room-number/room-number';
 @import '../blocks/long-button/long-button.scss';
 @import '../blocks/text-field/text-field.scss';
+@import '../blocks/registration-card/registration-card.scss';
+@import '../blocks/radio-buttons/radio-buttons.scss';
+@import '../blocks/toggle/toggle.scss';
 
 body {
   font-family: Montserrat, OpenSans, sans-serif;
@@ -29,7 +33,7 @@ a {
 
 h1 {
   font-family: Quicksand, OpenSans, sans-serif;
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 28px;
 
@@ -66,4 +70,8 @@ ul {
 
 p {
   margin: 0;
+}
+
+input {
+  outline: none;
 }

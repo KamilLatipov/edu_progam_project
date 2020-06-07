@@ -1,0 +1,6 @@
+mixin radio-buttons({list})
+  .radio-buttons
+    each item in list
+      label.radio-buttons__item= item.label
+        input.radio-buttons__input(type='radio' name= item.name checked= item.isChecked)
+        span.radio-buttons__circle
