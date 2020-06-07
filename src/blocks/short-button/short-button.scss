@@ -1,0 +1,37 @@
+@import '../../style/color.scss';
+
+.short-button {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  color: $purple;
+  text-transform: uppercase;
+
+  border-radius: 22px;
+
+  &:hover {
+    color: $dark-shade-50;
+  }
+
+  &--common,
+  &--gradient {
+    padding: 14px 26px;
+  }
+
+  &--common {
+    border: 2px solid $purple;
+
+    &:hover {
+      color: $purple;
+
+      border: 2px solid $dark-shade-25;
+    }
+  }
+
+  &--gradient {
+    color: white;
+
+    border: none;
+    background-image: $gradient;
+  }
+}

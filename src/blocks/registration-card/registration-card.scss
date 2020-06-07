@@ -26,3 +26,17 @@
 .registration-card__item {
   margin-bottom: 10px;
 }
+
+.registration-card__button {
+  padding: 5px 0 28px;
+}
+
+.registration-card__text {
+  color: black;
+}
+
+.registration-card__enter {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}

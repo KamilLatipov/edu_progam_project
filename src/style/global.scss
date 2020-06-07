@@ -16,6 +16,7 @@
 @import '../blocks/registration-card/registration-card.scss';
 @import '../blocks/radio-buttons/radio-buttons.scss';
 @import '../blocks/toggle/toggle.scss';
+@import '../blocks/short-button/short-button.scss';
 
 body {
   font-family: Montserrat, OpenSans, sans-serif;
@@ -73,5 +74,11 @@ p {
 }
 
 input {
+  outline: none;
+}
+
+button {
+  background-color: white;
+  border: none;
   outline: none;
 }
