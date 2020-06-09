@@ -1,8 +1,9 @@
 mixin footer-nav(nav)
-  each item in nav
-    ul.footer-nav__list
-      li.footer-nav__item
-        h3.footer-nav__title= item.title
-      each link in item.links
+  nav.footer-nav
+    each item in nav
+      ul.footer-nav__list
         li.footer-nav__item
-          a.footer-nav__item(href="link.link")= link.name
+          h3.footer-nav__title= item.title
+        each link in item.links
+          li.footer-nav__item
+            a.footer-nav__item(href="link.link")= link.name

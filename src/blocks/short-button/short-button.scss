@@ -1,11 +1,17 @@
 @import '../../style/color.scss';
 
 .short-button {
+  width: 100%;
+  height: 100%;
+
+  font-family: Montserrat;
   font-size: 12px;
   font-weight: bold;
   line-height: 15px;
   color: $purple;
+
   text-transform: uppercase;
+  text-align: center;
 
   border-radius: 22px;
 
@@ -15,7 +21,7 @@
 
   &--common,
   &--gradient {
-    padding: 14px 26px;
+    padding: 0 15px;
   }
 
   &--common {

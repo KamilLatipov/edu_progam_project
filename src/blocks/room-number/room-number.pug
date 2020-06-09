@@ -1,9 +1,13 @@
-mixin room-number(number, isLuxury, price)
-  .room-number__cell
-    span.room-number__number.room-number__number--text №
-    span.room-number__number= number
-    if (isLuxury)
-      span.room-number__luxury люкс
-  .room-number__cell
-    span.room-number__price= price
-    span.room-number__price.room-number__price--text в сутки
+mixin room-number(number, numberLarge , isLuxury, price)
+  - let roomNumber = ['room-number__number']
+  if (numberLarge)
+    - roomNumber.push('room-number__number--large')
+  .room-number
+    .room-number__cell
+      span.room-number__text №
+      span(class= roomNumber )= number
+      if (isLuxury)
+        span.room-number__luxury люкс
+    .room-number__cell
+      span.room-number__price= price
+      span.room-number__price.room-number__price--text в сутки

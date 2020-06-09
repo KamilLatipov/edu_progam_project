@@ -4,6 +4,7 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox/checkbox
 include ../../blocks/room-card/room-card
 include ../../blocks/pagination/pagination
+include ../../blocks/rich-checkbox/rich-checkbox
 
 block content
   .search-page
@@ -17,8 +18,8 @@ block content
           input.slider
           p.slider__info
         .search-page__checkbox
+          h3.search-page__title Checkbox buttons
           +checkbox({
-            title: "CHECKBOX BUTTONS",
             items: [
               {
                 text: "Можно курить"
@@ -32,8 +33,8 @@ block content
             ]
           })
         .search-page__availability
-          +checkbox({
-            title: "Доступность",
+          h3.search-page__title Доступность
+          +rich-checkbox({
             items: [
               {
                 text: "Широкий коридор",
@@ -57,6 +58,7 @@ block content
             {
               link: "room-1.png",
               number: 888,
+              numberLarge: false,
               isLuxury: true,
               price: '9 990₽',
               rating: 5,
@@ -64,91 +66,102 @@ block content
             },
             {
               link: "room-2.png",
-              number: 888,
+              number: 840,
+              numberLarge: true,
               isLuxury: false,
               price: '9 999₽',
               rating: 5,
-              comments: 145,
+              comments: 65,
             },
             {
               link: "room-3.png",
-              number: 888,
+              number: 980,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '8 500₽',
               rating: 5,
-              comments: 145,
+              comments: 35,
             },
             {
               link: "room-4.png",
-              number: 888,
+              number: 856,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '7 300₽',
               rating: 5,
-              comments: 145,
+              comments: 19,
             },
             {
               link: "room-5.png",
-              number: 888,
+              number: 740,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '6 00₽',
               rating: 5,
-              comments: 145,
+              comments: 44,
             },
             {
               link: "room-6.png",
-              number: 888,
+              number: 982,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 800₽',
               rating: 5,
-              comments: 145,
+              comments: 56,
             },
             {
               link: "room-7.png",
-              number: 888,
+              number: 678,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 500₽',
               rating: 5,
-              comments: 145,
+              comments: 45,
             },
             {
               link: "room-8.png",
-              number: 888,
+              number: 450,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 300₽',
               rating: 5,
-              comments: 145,
+              comments: 39,
             },
             {
               link: "room-9.png",
-              number: 888,
+              number: 350,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 000₽',
               rating: 5,
-              comments: 145,
+              comments: 77,
             },
             {
               link: "room-10.png",
-              number: 888,
+              number: 666,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 000₽',
               rating: 5,
-              comments: 145,
+              comments: 25,
             },
             {
               link: "room-11.png",
-              number: 888,
+              number: 444,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price: '5 000₽',
               rating: 5,
-              comments: 145,
+              comments: 15,
             },
             {
               link: "room-12.png",
-              number: 888,
+              number: 352,
+              numberLarge: true,
               isLuxury: true,
-              price: '9 999₽',
+              price:  '5 000₽',
               rating: 5,
-              comments: 145,
+              comments: 55,
             },
           ]
         })

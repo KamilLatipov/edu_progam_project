@@ -41,6 +41,8 @@
   border-bottom: 1px solid rgba(31,32,65,0.1);
 
   padding: 20px 0 9px 0;
+
+  margin-left: 5px;
 }
 
 .room-card__cell {
@@ -54,7 +56,7 @@
 }
 
 .room-card__comments {
-  margin: 0;
+  margin: 0 5px 0 0;
 
   font-weight: bold;
   font-size: 14px;

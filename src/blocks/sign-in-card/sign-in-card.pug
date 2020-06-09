@@ -1,0 +1,20 @@
+include ../text-field/text-field
+include ../long-button/long-button
+include ../short-button/short-button
+
+
+mixin sign-in-card
+  .sign-in-card
+    .sign-in-card__container
+      h1.sign-in-card__title Войти
+      .sign-in-card__block
+        .sign-in-card__item
+          +text-field('email', 'Email')
+        .sign-in-card__item
+          +text-field('password', 'Пароль')
+      .sign-in-card__button
+        +long-button('Войти')
+      .sign-in-card__registration
+        p.sign-in-card__text Нет аккаунта на Toxin?
+        .sign-in-card__registration-button
+          +short-button('Создать', 'common')

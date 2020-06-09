@@ -1,6 +1,6 @@
 @import "../../style/color.scss";
 
-.checkbox__wrapper {
+.checkbox{
   margin-bottom: 12px;
 }
 
@@ -39,7 +39,6 @@
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .checkbox__label input {
   position: absolute;
   opacity: 0;
@@ -48,7 +47,6 @@
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkbox__checkmark {
   position: absolute;
   top: 0;
@@ -61,19 +59,16 @@
   border-radius: 4px;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkbox__checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .checkbox__label input:checked ~ .checkbox__checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .checkbox__label .checkbox__checkmark:after {
   left: 5px;
   top: 4px;

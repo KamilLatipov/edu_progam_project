@@ -1,0 +1,42 @@
+.sign-in-card {
+  display: flex;
+  justify-content: center;
+
+  width: 380px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+  background-color: white;
+}
+
+.sign-in-card__container {
+  width: 320px;
+
+  padding: 40px 0 30px;
+}
+
+
+.sign-in-card__title {
+  margin-bottom: 20px;
+}
+
+.sign-in-card__item {
+  margin-bottom: 10px;
+}
+
+.sign-in-card__button {
+  padding: 20px 0 30px;
+}
+
+.sign-in-card__registration {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  &-button {
+    width: 99px;
+    height: 44px;
+  }
+}

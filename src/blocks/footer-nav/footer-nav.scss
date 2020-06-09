@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  width: 48%;
+  width: 100%;
 
   &__list {
     display: flex;
@@ -11,11 +11,11 @@
     margin: 0;
     padding: 0;
 
-    width: 29%;
+    width: 150px;
   }
 
   &__item {
-    margin-top: 14px;
+    margin-top: 13px;
 
     &:first-child {
       margin-top: 0;

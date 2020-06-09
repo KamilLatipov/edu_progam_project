@@ -1,13 +1,7 @@
-mixin checkbox( { title, items } )
+mixin checkbox( { items } )
   h3.checkbox__title= title
   each item in items
-    .checkbox__wrapper
-      if (item.subtext)
-        label.checkbox__label.checkbox__label--title= item.text
-          input( type="checkbox" )
-          span.checkbox__checkmark
-        p.checkbox__subtext= item.subtext
-      else
-        label.checkbox__label= item.text
-          input( type="checkbox" )
-          span.checkbox__checkmark
+    .checkbox
+      label.checkbox__label= item.text
+        input( type="checkbox" )
+        span.checkbox__checkmark

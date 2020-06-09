@@ -4,6 +4,7 @@
 @import '../pages/search-page/search-page.scss';
 @import '../pages/registration/registration';
 @import '../blocks/pagination/pagination.scss';
+@import '../pages/sign-in/sign-in.scss';
 @import '../pages/room-details/room-details.scss';
 @import '../blocks/room-information/room-information.scss';
 @import '../blocks/reviews/reviews.scss';
@@ -17,6 +18,8 @@
 @import '../blocks/radio-buttons/radio-buttons.scss';
 @import '../blocks/toggle/toggle.scss';
 @import '../blocks/short-button/short-button.scss';
+@import '../blocks/sign-in-card/sign-in-card.scss';
+@import '../blocks/rich-checkbox/rich-checkbox.scss';
 
 body {
   font-family: Montserrat, OpenSans, sans-serif;

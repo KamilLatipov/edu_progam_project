@@ -1,8 +1,9 @@
 include ../main-nav/main-nav.pug
 
 mixin header({nav})
-  .main-header__container
-    a.main-header__logo
-      img.main-header__img(src=require("../../images/Logo.png") width="106" height="40")
-    .main-nav
-      +main-nav(nav)
+  header.main-header
+    .main-header__container
+      a.main-header__logo
+        img.main-header__img(src=require("../../images/Logo.png") width="106" height="40")
+      .main-nav
+        +main-nav(nav)

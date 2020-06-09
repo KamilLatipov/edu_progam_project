@@ -6,10 +6,10 @@ mixin room-card({list})
       img.room-card__img(src=require(`../../images/${item.link}`))
       .room-card__info
         .room-card__row.room-card__line
-          +room-number(item.number, item.isLuxury, item.price)
+          +room-number(item.number, item.numberLarge, item.isLuxury, item.price)
         .room-card__row
           .room-card__cell
             p.room-card__rating= item.rating
           .room-card__cell
             p.room-card__comments= item.comments
-            p.room-card__comments--text &nbsp; Отзывов
+            p.room-card__comments--text Отзывов

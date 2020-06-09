@@ -4,9 +4,13 @@
 
   width: 380px;
 
+  margin: 28px 0;
+
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+  background-color: white;
 }
 
 .registration-card__container {
@@ -28,7 +32,9 @@
 }
 
 .registration-card__button {
-  padding: 5px 0 28px;
+  height: 44px;
+
+  padding: 7px 0 28px;
 }
 
 .registration-card__text {
@@ -39,4 +45,9 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+
+  &-button {
+    width: 99px;
+    height: 44px;
+  }
 }
