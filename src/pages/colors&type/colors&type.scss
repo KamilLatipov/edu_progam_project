@@ -1,0 +1,15 @@
+.colors-and-type {
+  width: 100%;
+}
+
+.colors-and-type__colors {
+  width: 20%;
+}
+
+.colors-and-type__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1300px;
+  margin: 20px auto;
+}

@@ -1,0 +1,68 @@
+@import '../../style/color';
+
+.colors__color {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 6px;
+}
+
+.colors {
+  &__shade {
+    &--purple {
+      background-color: $purple;
+    }
+
+    &--green {
+      background-color: $green;
+    }
+  }
+
+  &__dark-shade {
+    &--100 {
+      background-color: $dark-shade-100;
+    }
+
+    &--75 {
+      background-color: $dark-shade-75;
+    }
+
+    &--50 {
+      background-color: $dark-shade-50;
+    }
+
+    &--25 {
+      background-color: $dark-shade-25;
+    }
+
+    &--5 {
+      background-color: $dark-shade-5;
+    }
+  }
+}
+
+.colors__list {
+  width: 100%;
+}
+
+.colors__item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.colors__description {
+  margin-left: 30px;
+}
+
+.colors__title {
+  font-family: Quicksand, OpenSans, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.colors__hex {
+  font-family: OpenSans;
+  font-size: 17.5px;
+}

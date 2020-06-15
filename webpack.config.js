@@ -50,7 +50,7 @@ module.exports = {
   plugins: [	
      new HtmlWebpackPlugin({
        filename: 'index.html',
-       template: './src/pages/search-page/search-page.pug'
+       template: './src/pages/colors&type/colors&type.pug'
      }),
     new CopyWebpackPlugin({
       patterns: [

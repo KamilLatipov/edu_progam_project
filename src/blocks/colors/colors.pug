@@ -1,0 +1,9 @@
+mixin colors({list})
+  ul.colors__list
+    each item in list
+      - let shade = ['colors__color', `colors__${item.shade}`]
+      li.colors__item
+        div(class= shade)
+        .colors__description
+          p.colors__title= item.title
+          p.colors__hex= item.hex

@@ -1,12 +1,6 @@
 @import '../../style/color.scss';
 
 .main-nav {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-
-  width: 794px;
-
   &__list {
     display: flex;
     flex-wrap: wrap;
