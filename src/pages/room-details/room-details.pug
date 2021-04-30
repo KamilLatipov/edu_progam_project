@@ -8,8 +8,12 @@ include ../../blocks/book-card/book-card
 block content
   main.room-detail
     .room-detail__images
-    .room-detail__detail
-      .room-detail__about
+      img.room-detail__image.room-detail__image--large(src=require("../../images/room-detail-large.png"))
+      .room-detail__images-right
+        img.room-detail__image(src=require("../../images/room-detail-1.png"))
+        img.room-detail__image(src=require("../../images/room-detail-2.png"))
+    .room-detail__main
+      .room-detail__detail
         .room-deatil__information
           h2.room-detail__title Сведения о номере
           +room-information({
