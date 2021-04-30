@@ -6,13 +6,10 @@
 
 .bullet__item {
   position: relative;
-
   width: 71%;
-
   padding-bottom: 10px;
 
   &::before {
-    content: '';
     position: absolute;
     top: 7px;
     left: -20px;
@@ -20,5 +17,6 @@
     height: 10px;
     background-color: $dark-shade-25;
     border-radius: 50%;
+    content: '';
   }
 }
