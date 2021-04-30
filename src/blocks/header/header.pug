@@ -1,4 +1,4 @@
-include ../navigation/navigation.pug
+include ../header-nav/header-nav
 
 mixin header({nav})
   header.header
@@ -6,4 +6,4 @@ mixin header({nav})
       a.header__logo
         img.header__img(src=require("../../images/Logo.png") width="106" height="40")
       .header__nav
-        +navigation(nav)
+        +header-nav(nav)

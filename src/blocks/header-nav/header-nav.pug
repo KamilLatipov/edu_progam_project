@@ -1,13 +1,13 @@
 include ../short-button/short-button
 include ../long-button/long-button
 
-mixin navigation(nav)
-  .navigation
-    .navigation__list
+mixin header-nav(nav)
+  .header-nav
+    .header-nav__list
       each item in nav
-        a.navigation__item(href=item.link)= item.name
-    .navigation__account
-      .navigation__enter
+        a.header-nav__item(href=item.link)= item.name
+    .header-nav__account
+      .header-nav__enter
         +short-button('Войти', 'common')
-      .navigation__registration
+      .header-nav__registration
         +short-button('Зарегистрироваться', 'gradient')
