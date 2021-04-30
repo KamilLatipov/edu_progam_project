@@ -1,10 +1,8 @@
 import _ from 'lodash';
-import '../blocks/header/header.js';
-import '../blocks/main-nav/main-nav.js';
-import '../style/global.scss';
-import '../style/fonts.scss';
-import '../blocks/footer/footer.js';
-import '../blocks/footer-nav/footer-nav.js';
+function importAll(r) {
+    r.keys().forEach(r);
+}
 
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
+importAll(require.context('../style', true, /\.js$|\.scss$/));
+importAll(require.context('../blocks', true, /\.js$|\.scss$/));
+importAll(require.context('../pages', true, /\.js$|\.scss$/));

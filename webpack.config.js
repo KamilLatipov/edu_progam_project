@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -8,17 +10,25 @@ const PATHS = {
   assets: 'assets/'
 };
 
+let htmlPageNames = ['colors&type', 'registration', 'room-details', 'search-page', 'sign-in'];
+let multipleHtmlPlugins = htmlPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/pages/${name}/${name}.pug`,
+    filename: `${name}.html`,
+  })
+});
+
+
 module.exports = {
-  
   entry: {
     main: './src/pages/main.js',
-    },
- 	  module: {
+  },
+  module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
+        loader: [
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
@@ -37,8 +47,12 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
+        exclude: [
+          path.resolve(__dirname, 'src/fonts'),
+        ],
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          outputPath: 'assets',
         },
       },
       {
@@ -47,17 +61,16 @@ module.exports = {
       },
     ],
   },
-  plugins: [	
-     new HtmlWebpackPlugin({
-       filename: 'index.html',
-       template: './src/pages/colors&type/colors&type.pug'
-     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: `src/images`, to: `images`},
-      ],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+     filename: 'index.html',
+     template: './src/pages/start.html'
     }),
-  ],
+    new MiniCssExtractPlugin({
+      filename: 'main.css',
+    }),
+  ].concat(multipleHtmlPlugins),
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
