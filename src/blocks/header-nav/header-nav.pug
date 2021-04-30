@@ -1,13 +1,16 @@
 include ../short-button/short-button
 include ../long-button/long-button
 
-mixin header-nav(nav)
+mixin header-nav(nav, isAuth, name)
   .header-nav
     .header-nav__list
       each item in nav
         a.header-nav__item(href=item.link)= item.name
     .header-nav__account
-      .header-nav__enter
-        +short-button('Войти', 'common')
-      .header-nav__registration
-        +short-button('Зарегистрироваться', 'gradient')
+      if (isAuth)
+        p.header__acc-name= name
+      else
+        .header-nav__enter
+          +short-button('Войти', 'common')
+        .header-nav__registration
+          +short-button('Зарегистрироваться', 'gradient')

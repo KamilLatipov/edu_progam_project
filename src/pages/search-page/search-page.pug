@@ -10,8 +10,9 @@ block content
   .search-page
     .search-page__panel
       form.search-page__filter
-        .search-page__dropdowns
+        .search-page__dropdown
           +dropdown("Даты пребывания в отеле")
+        .search-page__dropdown
           +dropdown("Гости")
         .search-page__slider
           h3.search-page__title Диапазон цены
@@ -46,13 +47,13 @@ block content
               },
             ]
           })
-        .search-page__dropdowns
+        .search-page__dropdown
           +dropdown("Удобства номера")
         .search-page__checkbox
           h3.search-page__title Дополнительные удобства
     section.search-page__main
-      h1.search-page__main-title  Номера, которые мы для вас подобрали
-      .search-page__card-list
+      h1.search-page__main-title Номера, которые мы для вас подобрали
+      .search-page__list
         +room-card({
           list: [
             {
