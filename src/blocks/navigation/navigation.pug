@@ -1,0 +1,13 @@
+include ../short-button/short-button
+include ../long-button/long-button
+
+mixin navigation(nav)
+  .navigation
+    .navigation__list
+      each item in nav
+        a.navigation__item(href=item.link)= item.name
+    .navigation__account
+      .navigation__enter
+        +short-button('Войти', 'common')
+      .navigation__registration
+        +short-button('Зарегистрироваться', 'gradient')
