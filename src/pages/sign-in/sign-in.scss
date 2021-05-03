@@ -1,15 +1,13 @@
 .sign-in {
   background-image: url('./../../images/registration-img.png');
-  background-position-x: center;
   background-repeat: no-repeat;
+  background-position-x: center;
   background-size: cover;
 }
 
 .sign-in__container {
   display: flex;
   justify-content: center;
-
   max-width: 1170px;
-
   margin: 0 auto;
 }

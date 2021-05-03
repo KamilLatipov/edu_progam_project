@@ -3,12 +3,11 @@
 .like-button {
   box-sizing: border-box;
   width: 40px;
+  height: 20px;
   padding: 1px;
+  color: $dark-shade-25;
   background: $dark-shade-25;
   border-radius: 10px;
-  height: 20px;
-
-  color: $dark-shade-25;
   outline: none;
 
   &__clicked {
@@ -19,18 +18,13 @@
 
 .like-button__wrapper {
   display: flex;
-
-  justify-content: center;
   align-items: center;
-
-  height: 100%;
+  justify-content: center;
   width: 100%;
-
-  border-radius: 10px;
-
+  height: 100%;
   font-size: 10px;
-
   background: white;
+  border-radius: 10px;
 }
 
 .like-button__icon {

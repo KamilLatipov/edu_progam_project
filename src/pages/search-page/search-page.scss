@@ -1,22 +1,18 @@
 .search-page {
   display: flex;
   justify-content: space-between;
-
   max-width: 1162px;
-
   margin: 14px auto;
   padding-bottom: 70px;
 }
 
 .search-page__main {
   width: 72%;
-
   margin-top: 17px;
 }
 
 .search-page__panel {
   width: 28%;
-
   margin-top: 12px;
 }
 
@@ -27,18 +23,13 @@
 .search-page__list {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: space-between;
-
   width: 100%;
-
   margin-top: 22px;
 }
 
 .search-page__pagination {
   display: flex;
-
   max-width: 255px;
-
   margin: 20px auto 0;
 }

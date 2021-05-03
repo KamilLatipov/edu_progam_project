@@ -1,22 +1,17 @@
 .sign-in-card {
   display: flex;
   justify-content: center;
-
   width: 380px;
-
+  background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-
-  background-color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
 .sign-in-card__container {
   width: 320px;
-
   padding: 40px 0 30px;
 }
-
 
 .sign-in-card__title {
   margin-bottom: 20px;

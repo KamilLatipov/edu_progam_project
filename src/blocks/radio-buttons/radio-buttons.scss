@@ -8,38 +8,30 @@
   &:checked + .radio-buttons__circle {
     border: 1px solid $purple;
 
-      &::before {
-        content: '';
-
-        position: absolute;
-
-        top: 3px;
-        left: 3.2px;
-
-        width: 12px;
-        height: 12px;
-
-        border-radius: 50%;
-        background-image: $gradient;
-      }
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 3.2px;
+      width: 12px;
+      height: 12px;
+      background-image: $gradient;
+      border-radius: 50%;
+      content: '';
+    }
   }
 }
 
 .radio-buttons__item {
   position: relative;
-
   padding: 0 21px 0 30px;
 }
 
 .radio-buttons__circle {
   position: absolute;
-
   top: 0;
   left: 0;
-
   width: 18px;
   height: 18px;
-
   border: 1px solid $dark-shade-25;
   border-radius: 50%;
 }

@@ -2,12 +2,9 @@
 
 .type__tag {
   width: 40px;
-
   margin-right: 30px;
-
-  font-family: Montserrat;
   color: $dark-shade-25;
-
+  font-family: Montserrat;
   text-align: right;
   text-transform: uppercase;
 }
@@ -31,7 +28,6 @@
   &__body {
     font-size: 14px;
     line-height: 24px;
-
     text-transform: none;
   }
 }
@@ -43,8 +39,6 @@
 .type__item {
   display: flex;
   align-items: baseline;
-
   width: 477px;
-
   margin-bottom: 51px;
 }

@@ -1,35 +1,26 @@
 @import '../../style/color.scss';
 
-.rich-checkbox{
+.rich-checkbox {
   margin-bottom: 12px;
 }
 
 .rich-checkbox__subtext {
   width: 225px;
-
   margin-bottom: 5px;
   padding-left: 35px;
-
   color: $dark-shade-50;
   line-height: 14px;
 }
 
 .rich-checkbox__label {
-  display: block;
-
-  width: 203px;
-
   position: relative;
-
+  display: block;
+  width: 203px;
   padding-left: 30px;
-
-
   color: $dark-shade-75;
   font-weight: bold;
   line-height: 20px;
-
   cursor: pointer;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -38,42 +29,38 @@
 
 .rich-checkbox__label input {
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
   width: 0;
+  height: 0;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .rich-checkbox__checkmark {
   position: absolute;
   top: 0;
   left: 0;
-
-  height: 19px;
   width: 19px;
-
+  height: 19px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
 }
 
-.rich-checkbox__checkmark:after {
-  content: "";
+.rich-checkbox__checkmark::after {
   position: absolute;
   display: none;
+  content: "";
 }
 
-.rich-checkbox__label input:checked ~ .rich-checkbox__checkmark:after {
+.rich-checkbox__label input:checked ~ .rich-checkbox__checkmark::after {
   display: block;
 }
 
-.rich-checkbox__label .rich-checkbox__checkmark:after {
-  left: 5px;
+.rich-checkbox__label .rich-checkbox__checkmark::after {
   top: 4px;
-
+  left: 5px;
   width: 6px;
   height: 8px;
-
-  border: solid #BC9CFF;
+  border: solid #bc9cff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

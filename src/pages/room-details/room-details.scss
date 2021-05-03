@@ -6,9 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   max-width: 1170px;
-
   margin: 14px auto;
 }
 
@@ -36,7 +34,6 @@
 .room-detail__detail {
   display: flex;
   flex-wrap: wrap;
-
   max-width: 65%;
 }
 
@@ -50,13 +47,11 @@
 
 .room-detail__reviews {
   width: 100%;
-
   margin: 14px 0;
 }
 
 .room-detail__bullet {
   width: 45%;
-
   margin-left: 20px;
 }
 
@@ -66,6 +61,5 @@
 
 .room-detail__text {
   width: 90%;
-
   padding: 18px 0;
 }

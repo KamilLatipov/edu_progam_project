@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
@@ -69,6 +70,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css',
+    }),
+    new StylelintPlugin({
+      fix: true
     }),
   ].concat(multipleHtmlPlugins),
   output: {
