@@ -10,14 +10,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 450px;
+    width: 446px;
     color: $dark-shade-50;
+    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
   }
 
   &__item {
-    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
   &__account {
@@ -37,5 +41,13 @@
   &__registration {
     width: 196px;
     height: 34px;
+  }
+
+  &__arrow {
+    width: 26px;
+    height: 16px;
+    font-size: 25px;
+    font-family: 'Material Icons';
+    line-height: 20px;
   }
 }

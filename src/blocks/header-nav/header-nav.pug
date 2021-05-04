@@ -5,7 +5,12 @@ mixin header-nav(nav, isAuth, name)
   .header-nav
     .header-nav__list
       each item in nav
-        a.header-nav__item(href=item.link)= item.name
+        if (item.icon)
+          .header-nav__item
+            a.header-nav__item(href=item.link)= item.name
+            .header-nav__arrow= item.icon
+        else
+          a.header-nav__item(href=item.link)= item.name
     .header-nav__account
       if (isAuth)
         p.header__acc-name= name
