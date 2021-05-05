@@ -1,3 +1,5 @@
+@import '../../style/color.scss';
+
 .room-detail {
   width: 100%;
 }
@@ -6,8 +8,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1170px;
-  margin: 14px auto;
+  max-width: 1160px;
+  margin: 70px auto 0 auto;
 }
 
 .room-detail__images {
@@ -17,11 +19,11 @@
 
 .room-detail__image {
   width: 100%;
-  height: 240px;
+  height: 242px;
 
   &--large {
     width: 60%;
-    height: 480px;
+    height: 484px;
   }
 }
 
@@ -34,32 +36,54 @@
 .room-detail__detail {
   display: flex;
   flex-wrap: wrap;
-  max-width: 65%;
+  max-width: 711px;
+}
+
+.room-detail__info-block {
+  width: 50%;
 }
 
 .room-detail__information {
-  width: 50%;
+  margin-top: 3px;
 }
 
 .room-detail__impression {
   width: 50%;
 }
 
-.room-detail__reviews {
+.room-detail__rev-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  margin: 14px 0;
+  margin: 10px 0 16px 0;
 }
 
-.room-detail__bullet {
+.room-detail__reviews {
+  padding: 18px 0;
+}
+
+.room-detail__bullet-block {
   width: 45%;
   margin-left: 20px;
 }
 
+.room-detail__bullet {
+  margin-top: 16px;
+}
+
 .room-detail__decline {
-  width: 48%;
+  width: 49%;
+  margin-left: 20px;
 }
 
 .room-detail__text {
   width: 90%;
   padding: 18px 0;
+}
+
+.room-detail--light-text {
+  padding-top: 5px;
+  color: $dark-shade-50;
 }

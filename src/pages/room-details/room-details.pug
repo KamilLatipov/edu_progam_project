@@ -14,70 +14,74 @@ block content
         img.room-detail__image(src=require("../../images/room-detail-2.png"))
     .room-detail__main
       .room-detail__detail
-        .room-deatil__information
+        .room-deatil__info-block
           h2.room-detail__title Сведения о номере
-          +room-information({
-          list: [
-            {
-              icon: 'insert_emoticon',
-              title: 'Комфорт',
-              text: 'Шумопоглощающие стены'
-            },
-            {
-              icon: 'location_city',
-              title: 'Удобство',
-              text: 'Окно в каждой из спален'
-            },
-            {
-              icon: 'whatshot',
-              title: 'Уют',
-              text: 'Номер оснащен камином'
-            },
-          ]
-          })
+          .room-detail__information
+            +room-information({
+            list: [
+              {
+                icon: 'insert_emoticon',
+                title: 'Комфорт',
+                text: 'Шумопоглощающие стены'
+              },
+              {
+                icon: 'location_city',
+                title: 'Удобство',
+                text: 'Окно в каждой из спален'
+              },
+              {
+                icon: 'whatshot',
+                title: 'Уют',
+                text: 'Номер оснащен камином'
+              },
+            ]
+            })
         .room-detail__impression
-        .room-detail__reviews
+        .room-detail__rev-block
           h2.room-detail__title Отзывы посетителей номера
-          +reviews({
-            list: [
-              {
-                likeCount: '12',
-                isClicked: true,
-                link: 'avatar-1.png',
-                name: 'Мурад Сарафанов',
-                date: '5 дней назад',
-                text: 'Великолепный матрас на кровати в основной спальне! ' +
-                        'А пуфик вообще потрясающий. ' +
-                        ' И стены, действительно, шумоподавляющие. ' +
-                        'Выкрикивал комплименты повару — никто не жаловался из соседей.'
-              },
-              {
-                likeCount: '2',
-                isClicked: false,
-                link: 'avatar-2.png',
-                name: 'Патрисия Стёклышкова',
-                date: 'Неделю назад',
-                text: 'Обслуживание на высоте! ' +
-                        'Всё аккуратно, чисто. ' +
-                        'Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
-              },
-            ]
-          })
-        .room-detail__bullet
+          p.room-detail--light-text 2 отзыва
+          .room-detail__reviews
+            +reviews({
+              list: [
+                {
+                  likeCount: '12',
+                  isClicked: true,
+                  link: 'avatar-1.png',
+                  name: 'Мурад Сарафанов',
+                  date: '5 дней назад',
+                  text: 'Великолепный матрас на кровати в основной спальне! ' +
+                          'А пуфик вообще потрясающий. ' +
+                          ' И стены, действительно, шумоподавляющие. ' +
+                          'Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                },
+                {
+                  likeCount: '2',
+                  isClicked: false,
+                  link: 'avatar-2.png',
+                  name: 'Патрисия Стёклышкова',
+                  date: 'Неделю назад',
+                  text: 'Обслуживание на высоте! ' +
+                          'Всё аккуратно, чисто. ' +
+                          'Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+                },
+              ]
+            })
+        .room-detail__bullet-block
           h2.room-detail__title Правила
-          +bullet({
-            list: [
-              {
-                text: 'Нельзя с питомцами'
-              },
-              {
-                text: 'Без вечеринок и мероприятий'
-              },
-              {
-                text: 'Время прибытия — после 13:00, а выезд до 12:00'
-              }
-            ]
-          })
+          .room-detail__bullet
+            +bullet({
+              list: [
+                {
+                  text: 'Нельзя с питомцами'
+                },
+                {
+                  text: 'Без вечеринок и мероприятий'
+                },
+                {
+                  text: 'Время прибытия — после 13:00, а выезд до 12:00'
+                }
+              ]
+            })
         .room-detail__decline
           h2.room-detail__title Отмена
           p.room-detail__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
