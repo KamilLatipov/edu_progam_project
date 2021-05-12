@@ -1,3 +1,5 @@
-mixin dropdown( title )
-    h3.dropdown__title= title
-    input( type=text, placeholder="room" )
+mixin dropdown( title, placeholder, theme, clear_btn, apply_btn, isHidden)
+    .dropdown
+        h3.dropdown__title= title
+        input(type=text, placeholder=placeholder).dropdown__field
+        ul(data-theme=theme, data-clear-btn=clear_btn, data-apply-btn=apply_btn, data-ishidden=isHidden).dropdown__hiddden-part
