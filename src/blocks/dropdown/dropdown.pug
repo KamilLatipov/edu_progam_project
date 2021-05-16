@@ -1,5 +1,5 @@
-mixin dropdown( title, placeholder, theme, clear_btn, apply_btn, isHidden)
+mixin dropdown( title, placeholder, input_field, parameters, clear_btn, apply_btn, isHidden)
     .dropdown
         h3.dropdown__title= title
         input(type=text, placeholder=placeholder).dropdown__field
-        ul(data-theme=theme, data-clear-btn=clear_btn, data-apply-btn=apply_btn, data-ishidden=isHidden).dropdown__hiddden-part
+        ul(data-input-field=input_field, data-parameters=parameters, data-clear-btn=clear_btn, data-ishidden=isHidden).dropdown__hidden-part

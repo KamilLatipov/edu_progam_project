@@ -11,7 +11,15 @@ block content
     .search-page__panel
       form.search-page__filter
         .search-page__dropdown
-          +dropdown('Даты пребывания в отеле')
+          +dropdown(
+            'Даты пребывания в отеле',
+            'Сколько комнат?',
+            'спальни,спален,спальня;кровати,кроватей,кровать;ванных комнат, ванные комнаты, ванная комната',
+            'Спальни;Кровати;Ванные комнаты',
+            true,
+            false,
+            true
+          )
         .search-page__dropdown
           +dropdown('Гости', 'Сколько гостей')
         .search-page__slider
