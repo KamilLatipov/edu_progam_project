@@ -12,16 +12,28 @@ block content
       form.search-page__filter
         .search-page__dropdown
           +dropdown(
-            'Даты пребывания в отеле',
-            'Сколько комнат?',
-            'спальни,спален,спальня;кровати,кроватей,кровать;ванных комнат, ванные комнаты, ванная комната',
-            'Спальни;Кровати;Ванные комнаты',
-            true,
-            false,
-            true
+              'Даты пребывания в отеле',
+              'Сколько комнат?',
+              'спальни,спален,спальня;кровати,кроватей,кровать;ванных комнат, ванные комнаты, ванная комната',
+              [
+                {
+                  parameterName: 'Спальни',
+                  initCount: '0',
+                },
+                {
+                  parameterName: 'Кровати',
+                  initCount: '0',
+                },
+                {
+                  parameterName: 'Ванные комнаты',
+                  initCount: '0',
+                }
+              ],
+              true,
+              true,
+              true
           )
         .search-page__dropdown
-          +dropdown('Гости', 'Сколько гостей')
         .search-page__slider
           h3.search-page__title Диапазон цены
           input.slider
@@ -56,7 +68,6 @@ block content
             ]
           })
         .search-page__dropdown
-          +dropdown("Удобства номера")
         .search-page__checkbox
           h3.search-page__title Дополнительные удобства
     section.search-page__main

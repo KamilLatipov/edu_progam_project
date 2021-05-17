@@ -1,5 +1,16 @@
-mixin dropdown( title, placeholder, input_field, parameters, clear_btn, apply_btn, isHidden)
+mixin dropdown( title, placeholder, input_field_forms, parameters , clear_btn, apply_btn, isHidden)
     .dropdown
         h3.dropdown__title= title
         input(type=text, placeholder=placeholder).dropdown__field
-        ul(data-input-field=input_field, data-parameters=parameters, data-clear-btn=clear_btn, data-ishidden=isHidden).dropdown__hidden-part
+        div.dropdown__hidden-part
+            ul(data-input-field=input_field_forms).dropdown__parameters
+                for item in parameters
+                    li.dropdown__parameter
+                        h3.dropdown__param-name= item.parameterName
+                        div.dropdown__counter-block
+                            span.dropdown__minus-btn
+                            h3.dropdown__minus-counter= item.initCount
+                            span.dropdown__plus-btn
+            div.dropdown__buttons
+                button.dropdown__clear-btn
+                button.dropdown__apply-btn
