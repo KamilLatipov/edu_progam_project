@@ -33,6 +33,27 @@ block content
               true
           )
         .search-page__dropdown
+          +dropdown(
+            'Даты пребывания в отеле',
+            'Сколько комнат?',
+            'спальня,спальни,спален;кровать,кровати,кроватей',
+            [
+              {
+                parameterName: 'Спальни',
+                initCount: 11,
+              },
+              {
+                parameterName: 'Комнаты',
+                initCount: 11,
+              },
+              {
+                parameterName: 'Кровати',
+                initCount: 10,
+              },
+            ],
+            true,
+            true
+          )
         .search-page__slider
           h3.search-page__title Диапазон цены
           input.slider
