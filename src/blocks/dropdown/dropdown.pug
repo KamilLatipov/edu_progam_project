@@ -1,16 +1,20 @@
-mixin dropdown( title, placeholder, input_field_forms, parameters , clear_btn, apply_btn, isHidden)
+mixin dropdown( title, placeholder, input_field_forms, parameters , buttonsExist, isHidden)
+    - let dropdownMenu = ['dropdown__menu']
+    if isHidden
+        - dropdownMenu.push('dropdown__menu--hidden')
     .dropdown
         h3.dropdown__title= title
-        input(type=text, placeholder=placeholder).dropdown__field
-        div.dropdown__hidden-part
-            ul(data-input-field=input_field_forms).dropdown__parameters
+        input(type=text, placeholder=placeholder data-input-field=input_field_forms data-placeholder=placeholder).dropdown__input-field
+        div(class=dropdownMenu)
+            ul.dropdown__parameters
                 for item in parameters
                     li.dropdown__parameter
                         h3.dropdown__param-name= item.parameterName
                         div.dropdown__counter-block
                             span.dropdown__minus-btn
-                            h3.dropdown__minus-counter= item.initCount
+                            h3.dropdown__num-value= item.initCount
                             span.dropdown__plus-btn
-            div.dropdown__buttons
-                button.dropdown__clear-btn
-                button.dropdown__apply-btn
+            if buttonsExist
+                div.dropdown__buttons
+                    button.dropdown__button.dropdown__button-clr
+                    button.dropdown__button.dropdown__button-apply

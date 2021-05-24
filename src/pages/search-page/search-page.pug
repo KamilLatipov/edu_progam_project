@@ -8,28 +8,27 @@ include ../../blocks/rich-checkbox/rich-checkbox
 
 block content
   .search-page
-    .search-page__panel
+    sidebar.search-page__sidebar
       form.search-page__filter
         .search-page__dropdown
           +dropdown(
               'Даты пребывания в отеле',
               'Сколько комнат?',
-              'спальни,спален,спальня;кровати,кроватей,кровать;ванных комнат, ванные комнаты, ванная комната',
+              'спальня,спальни,спален;кровать,кровати,кроватей;ванная комната,ванные комнаты,ванных комнат',
               [
                 {
                   parameterName: 'Спальни',
-                  initCount: '0',
+                  initCount: 11,
                 },
                 {
                   parameterName: 'Кровати',
-                  initCount: '0',
+                  initCount: 10,
                 },
                 {
                   parameterName: 'Ванные комнаты',
-                  initCount: '0',
+                  initCount: 1,
                 }
               ],
-              true,
               true,
               true
           )
