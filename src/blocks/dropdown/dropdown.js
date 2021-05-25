@@ -8,28 +8,39 @@ function initDropdown(dropdown) {
     const inputField = dropdown.getElementsByClassName('dropdown__input-field');
     const inputFieldValues = inputField[0].getAttribute('data-input-field').split(';');
     const inputFieldPlaceholder = inputField[0].getAttribute('data-placeholder');
+    const dropdownMenu = dropdown.getElementsByClassName('dropdown__menu');
     const dropdownParams = dropdown.getElementsByClassName('dropdown__parameter');
+    const clearButton = dropdown.getElementsByClassName('dropdown__button-clr');
     let paramValues = [];
     let inputItems = {
         paramValues: paramValues,
         inputFieldPlaceholder: inputFieldPlaceholder,
         inputFieldValues: inputFieldValues,
         inputField: inputField[0],
+        clearButton: clearButton[0],
     };
-
+    inputField[0].addEventListener('click', handleInputFieldClick);
     Array.from(dropdownParams).forEach(function(dropdownParam, index) {
         paramValues[index] = parseInt(getParamValue(dropdownParam));
         initAmountChangeButtons(index, inputItems, dropdownParam);
     });
-    fillInputField(inputItems);
+    fillInputField(inputItems, );
+
+    function handleInputFieldClick() {
+        inputField[0].classList.toggle('dropdown__input-field--active')
+        dropdownMenu[0].classList.toggle('dropdown__menu--hidden');
+    }
 }
 
-function fillInputField({paramValues, inputFieldPlaceholder, inputFieldValues, inputField}) {
+function fillInputField({paramValues, inputFieldPlaceholder, inputFieldValues, inputField, clearButton}) {
     if (!checkTotalAmountIsZero(paramValues)) {
         inputField.placeholder = inputFieldPlaceholder;
+        clearButton.classList.add('dropdown__button-clr--hidden');
     }
     else {
         inputField.placeholder = getInputField(paramValues, inputFieldValues);
+        if (clearButton.classList.contains('dropdown__button-clr--hidden'))
+            clearButton.classList.remove('dropdown__button-clr--hidden');
     }
 }
 
@@ -116,8 +127,8 @@ function getSuitableForm(paramValue, textForms) {
 
 function limitInputFieldLength(inputField) {
     let editedText = '';
-    if (inputField.length > 25) {
-        editedText = inputField.slice(0, 22);
+    if (inputField.length > 23) {
+        editedText = inputField.slice(0, 20);
         editedText += '...';
         return (editedText);
     }
@@ -139,15 +150,18 @@ function initAmountChangeButtons(index, inputItems, dropdownParam) {
 
     function handleMinusButtonClick() {
         inputItems.paramValues[index] = parseInt(inputItems.paramValues[index]) - 1;
-        if (inputItems.paramValues[index] < 0)
+        console.log(inputItems.paramValues[index]);
+        if (inputItems.paramValues[index] <= 0) {
             inputItems.paramValues[index] = 0;
+            minusButton[0].classList.add('dropdown__small-btn--disabled');
+        }
         paramNumValueElem[0].innerHTML = inputItems.paramValues[index];
         fillInputField(inputItems);
     }
     function handlePlusButtonClick() {
+        if (inputItems.paramValues[index] >= 0)
+            minusButton[0].classList.remove('dropdown__small-btn--disabled')
         inputItems.paramValues[index] = parseInt(inputItems.paramValues[index]) + 1;
-        if (inputItems.paramValues[index] < 0)
-            inputItems.paramValues[index] = 0;
         paramNumValueElem[0].innerHTML = inputItems.paramValues[index];
         fillInputField(inputItems);
     }

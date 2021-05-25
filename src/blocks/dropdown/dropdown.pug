@@ -1,20 +1,23 @@
 mixin dropdown( title, placeholder, input_field_forms, parameters , buttonsExist, isHidden)
     - let dropdownMenu = ['dropdown__menu']
+    - let inputField = ['dropdown__input-field']
     if isHidden
         - dropdownMenu.push('dropdown__menu--hidden')
+    else
+        - inputField.push('dropdown__input-field--active')
     .dropdown
         h3.dropdown__title= title
-        input(type=text, placeholder=placeholder data-input-field=input_field_forms data-placeholder=placeholder).dropdown__input-field
+        input(type=text, class=inputField, placeholder=placeholder data-input-field=input_field_forms data-placeholder=placeholder readonly)
         div(class=dropdownMenu)
             ul.dropdown__parameters
                 for item in parameters
                     li.dropdown__parameter
                         h3.dropdown__param-name= item.parameterName
                         div.dropdown__counter-block
-                            span.dropdown__minus-btn -
+                            span.dropdown__small-btn.dropdown__minus-btn -
                             h3.dropdown__num-value= item.initCount
-                            span.dropdown__plus-btn +
+                            span.dropdown__small-btn.dropdown__plus-btn +
             if buttonsExist
                 div.dropdown__buttons
-                    button.dropdown__button.dropdown__button-clr
-                    button.dropdown__button.dropdown__button-apply
+                    button.dropdown__button.dropdown__button-clr Очистить
+                    button.dropdown__button.dropdown__button-apply Применить
