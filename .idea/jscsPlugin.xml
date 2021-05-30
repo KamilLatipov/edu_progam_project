@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JscsProjectComponent">
+    <option name="jscsrcFile" value="node_modules\des.js\.jscsrc" />
+    <option name="preset" value="Airbnb" />
+    <option name="jscsExecutable" value="C:\Users\latip\AppData\Roaming\npm\jscs.cmd" />
+    <option name="nodeInterpreter" value="" />
+    <option name="pluginEnabled" value="true" />
+    <option name="esprima" value="" />
+  </component>
+</project>

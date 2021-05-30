@@ -1,24 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
-const PATHS = {
-  src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../dist'),
-  assets: 'assets/'
-};
-
-let htmlPageNames = ['colors&type', 'registration', 'room-details', 'search-page', 'sign-in'];
-let multipleHtmlPlugins = htmlPageNames.map(name => {
-  return new HtmlWebpackPlugin({
-    template: `./src/pages/${name}/${name}.pug`,
-    filename: `${name}.html`,
-  })
-});
-
+const htmlPageNames = ['colors&type', 'registration', 'room-details', 'search-page', 'sign-in'];
+const multipleHtmlPlugins = htmlPageNames.map((name) => new HtmlWebpackPlugin({
+  template: `./src/pages/${name}/${name}.pug`,
+  filename: `${name}.html`,
+}));
 
 module.exports = {
   entry: {
@@ -38,7 +28,7 @@ module.exports = {
         test: /\.css$/i,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
         ],
       },
       {
@@ -65,14 +55,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-     filename: 'index.html',
-     template: './src/pages/start.html'
+      filename: 'index.html',
+      template: './src/pages/start.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'main.css',
     }),
     new StylelintPlugin({
-      fix: true
+      fix: true,
     }),
   ].concat(multipleHtmlPlugins),
   output: {
