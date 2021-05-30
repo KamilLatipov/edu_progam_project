@@ -20,6 +20,7 @@ function initDropdown(dropdown) {
     clearButton: clearButton[0],
   };
   inputField[0].addEventListener('click', handleInputFieldClick);
+  clearButton[0].addEventListener('click', handleClearButtonClick);
   Array.from(dropdownParams).forEach((dropdownParam, index) => {
     paramValues[index] = parseInt(getParamValue(dropdownParam));
     initAmountChangeButtons(index, inputItems, dropdownParam);
@@ -30,17 +31,37 @@ function initDropdown(dropdown) {
     inputField[0].classList.toggle('dropdown__input-field--active');
     dropdownMenu[0].classList.toggle('dropdown__menu--hidden');
   }
+  function handleClearButtonClick(event) {
+    event.preventDefault();
+    clearButton[0].classList.add('dropdown__button-clr--hidden');
+    clearParamValues(inputItems, dropdownParams);
+    fillInputField(inputItems);
+  }
 }
 
-function fillInputField({
-  paramValues, inputFieldPlaceholder, inputFieldValues, inputField, clearButton,
-}) {
+function clearParamValues({ paramValues, ...rest }, dropdownParams) {
+  let dropdownParamValue = HTMLElement;
+  let minusButton = HTMLElement;
+  paramValues.forEach((paramValue, index) => {
+    paramValues[index] = 0;
+  });
+  Array.from(dropdownParams).forEach((dropdownParam, index) => {
+    dropdownParamValue = dropdownParam.getElementsByClassName('dropdown__num-value');
+    minusButton = dropdownParam.getElementsByClassName('dropdown__minus-btn');
+    dropdownParamValue[0].innerHTML = 0;
+    minusButton[0].classList.add('dropdown__small-btn--disabled');
+  });
+}
+
+function fillInputField({ paramValues, inputFieldPlaceholder, inputFieldValues, inputField, clearButton }) {
   if (!checkTotalAmountIsZero(paramValues)) {
     inputField.placeholder = inputFieldPlaceholder;
     clearButton.classList.add('dropdown__button-clr--hidden');
   } else {
     inputField.placeholder = getInputField(paramValues, inputFieldValues);
-    if (clearButton.classList.contains('dropdown__button-clr--hidden')) { clearButton.classList.remove('dropdown__button-clr--hidden'); }
+    if (clearButton.classList.contains('dropdown__button-clr--hidden')) {
+      clearButton.classList.remove('dropdown__button-clr--hidden');
+    }
   }
 }
 
@@ -79,7 +100,7 @@ function getInputField(paramValues, inputFieldValues) {
     inputField += suitableTextForm;
   } else {
     for (i = 0; i < paramValues.length; i++) {
-      if (paramValues[i] !== '0' && inputField !== '') { isComma = ', '; } else { isComma = ''; }
+      if (paramValues[i] !== 0 && inputField !== '') { isComma = ', '; } else { isComma = ''; }
       suitableTextForm = findSuitableTextForm(inputFieldValues[i], paramValues[i]);
       inputField += isComma;
       inputField += suitableTextForm;
