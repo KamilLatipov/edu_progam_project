@@ -1,4 +1,3 @@
-import _ from 'lodash';
 function importAll(r) {
     r.keys().forEach(r);
 }

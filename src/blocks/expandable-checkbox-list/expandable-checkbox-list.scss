@@ -1,0 +1,28 @@
+@import '../../style/color.scss';
+
+.expandable-checkbox-list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.expandable-checkbox-list__title {
+  user-select: none;
+}
+
+.expandable-checkbox-list__arrow {
+  display: flex;
+  color: $dark-shade-50;
+  font-size: 24px;
+  font-family: Material Icons, sans-serif;
+  line-height: 24px;
+  transition: transform 0.5s ease;
+}
+
+.expandable-checkbox-list__arrow-rotate {
+  transform: rotate(180deg);
+}
+
+.expandable-checkbox-list__menu--hidden {
+  display: none;
+}

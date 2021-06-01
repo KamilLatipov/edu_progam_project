@@ -1,0 +1,9 @@
+include ../checkbox/checkbox
+
+mixin expandable-checkbox-list( title, items, arrow_icon )
+    .expandable-checkbox-list
+        .expandable-checkbox-list__wrapper
+            h3.expandable-checkbox-list__title= title
+            span.expandable-checkbox-list__arrow= arrow_icon
+        .expandable-checkbox-list__menu.expandable-checkbox-list__menu--hidden
+            +checkbox(items)

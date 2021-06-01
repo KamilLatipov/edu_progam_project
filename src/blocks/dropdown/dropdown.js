@@ -1,8 +1,7 @@
 const dropdowns = document.getElementsByClassName('dropdown');
-let i;
-for (i = 0; i < dropdowns.length; i++) {
-  initDropdown(dropdowns[i]);
-}
+Array.from(dropdowns).forEach(dropdown => {
+  initDropdown(dropdown);
+});
 
 function initDropdown(dropdown) {
   const inputField = dropdown.getElementsByClassName('dropdown__input-field');
@@ -75,7 +74,8 @@ function fillInputField({ paramValues, inputFieldPlaceholder, inputFieldValues, 
   if (!checkTotalAmountIsZero(paramValues)) {
     inputField.placeholder = inputFieldPlaceholder;
     clearButton.classList.add('dropdown__button-clr--hidden');
-  } else {
+  }
+  else {
     inputField.placeholder = getInputField(paramValues, inputFieldValues);
     if (clearButton.classList.contains('dropdown__button-clr--hidden')) {
       clearButton.classList.remove('dropdown__button-clr--hidden');
@@ -116,7 +116,8 @@ function getInputField(paramValues, inputFieldValues) {
     }
     suitableTextForm = findSuitableTextForm(inputFieldValues[1], paramValues[i]);
     inputField += suitableTextForm;
-  } else {
+  }
+  else {
     for (i = 0; i < paramValues.length; i++) {
       if (paramValues[i] !== 0 && inputField !== '') { isComma = ', '; } else { isComma = ''; }
       suitableTextForm = findSuitableTextForm(inputFieldValues[i], paramValues[i]);

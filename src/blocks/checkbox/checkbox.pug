@@ -1,7 +1,7 @@
-mixin checkbox( { items } )
-  h3.checkbox__title= title
-  each item in items
-    .checkbox
-      label.checkbox__label= item.text
-        input( type="checkbox" )
-        span.checkbox__checkmark
+mixin checkbox( items )
+  .checkbox
+    each item in items
+      .checkbox
+        label.checkbox__label= item.text
+          input( type="checkbox" )
+          span.checkbox__checkmark

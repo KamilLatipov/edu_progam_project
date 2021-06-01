@@ -5,6 +5,7 @@ include ../../blocks/checkbox/checkbox
 include ../../blocks/room-card/room-card
 include ../../blocks/pagination/pagination
 include ../../blocks/rich-checkbox/rich-checkbox
+include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
 
 block content
   .search-page
@@ -39,8 +40,8 @@ block content
           p.slider__info
         .search-page__checkbox
           h3.search-page__title Checkbox buttons
-          +checkbox({
-            items: [
+          +checkbox(
+            [
               {
                 text: "Можно курить"
               },
@@ -51,7 +52,7 @@ block content
                 text: "Можно пригласить гостей (до 10 человек)"
               }
             ]
-          })
+          )
         .search-page__availability
           h3.search-page__title Доступность
           +rich-checkbox({
@@ -68,7 +69,30 @@ block content
           })
         .search-page__dropdown
         .search-page__checkbox
-          h3.search-page__title Дополнительные удобства
+          +expandable-checkbox-list(
+            'Дополнительные удобства',
+            [
+                {
+                  text: "Завтрак"
+                },
+                {
+                  text: "Письменный стол"
+                },
+                {
+                  text: "Стул для кормления"
+                },
+                {
+                  text: "Кроватка"
+                },
+                {
+                  text: "Телевизор"
+                },
+                {
+                  text: "Шампунь"
+                }
+            ],
+            'keyboard_arrow_down'
+          )
     section.search-page__main
       h1.search-page__main-title Номера, которые мы для вас подобрали
       .search-page__list
