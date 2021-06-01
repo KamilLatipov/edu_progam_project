@@ -19,14 +19,17 @@ function initDropdown(dropdown) {
     inputField: inputField[0],
     clearButton: clearButton[0],
   };
+  window.addEventListener('click', handleOutsideDropdownClick);
   inputField[0].addEventListener('click', handleInputFieldClick);
   clearButton[0].addEventListener('click', handleClearButtonClick);
-  Array.from(dropdownParams).forEach((dropdownParam, index) => {
-    paramValues[index] = parseInt(getParamValue(dropdownParam));
-    initAmountChangeButtons(index, inputItems, dropdownParam);
-  });
+  initDropdownParams(inputItems, dropdownParams);
   fillInputField(inputItems);
 
+  function handleOutsideDropdownClick(event) {
+    if (checkClickedOutsideDropdown(event, dropdown, dropdownMenu[0])) {
+      dropdownMenu[0].classList.add('dropdown__menu--hidden');
+    }
+  }
   function handleInputFieldClick() {
     inputField[0].classList.toggle('dropdown__input-field--active');
     dropdownMenu[0].classList.toggle('dropdown__menu--hidden');
@@ -34,22 +37,37 @@ function initDropdown(dropdown) {
   function handleClearButtonClick(event) {
     event.preventDefault();
     clearButton[0].classList.add('dropdown__button-clr--hidden');
-    clearParamValues(inputItems, dropdownParams);
+    clearParamValues(inputItems);
+    clearParamInnerHtml(dropdownParams);
     fillInputField(inputItems);
   }
 }
 
-function clearParamValues({ paramValues, ...rest }, dropdownParams) {
-  let dropdownParamValue = HTMLElement;
-  let minusButton = HTMLElement;
+function checkClickedOutsideDropdown(event, dropdown, dropdownMenu) {
+  return (!dropdown.contains(event.target) && !dropdownMenu.classList.contains('dropdown__menu--hidden'));
+}
+
+function initDropdownParams(inputItems, dropdownParams) {
+  Array.from(dropdownParams).forEach((dropdownParam, index) => {
+    inputItems.paramValues[index] = parseInt(getParamValue(dropdownParam));
+    initAmountChangeButtons(index, inputItems, dropdownParam);
+  });
+}
+
+function clearParamValues({ paramValues, ...rest }) {
   paramValues.forEach((paramValue, index) => {
     paramValues[index] = 0;
   });
+}
+
+function clearParamInnerHtml(dropdownParams) {
+  let dropdownParamValue = HTMLElement;
+  let minusButton = HTMLElement;
   Array.from(dropdownParams).forEach((dropdownParam, index) => {
     dropdownParamValue = dropdownParam.getElementsByClassName('dropdown__num-value');
     minusButton = dropdownParam.getElementsByClassName('dropdown__minus-btn');
     dropdownParamValue[0].innerHTML = 0;
-    minusButton[0].classList.add('dropdown__small-btn--disabled');
+    changeMinusButtonAvailability(minusButton[0], false);
   });
 }
 
@@ -157,7 +175,7 @@ function initAmountChangeButtons(index, inputItems, dropdownParam) {
   const paramNumValueElem = dropdownParam.getElementsByClassName('dropdown__num-value');
 
   if (inputItems.paramValues[index] === 0) {
-    disableButton(minusButton[0]);
+    changeMinusButtonAvailability(minusButton[0], false);
   }
   minusButton[0].addEventListener('click', handleMinusButtonClick);
   plusButton[0].addEventListener('click', handlePlusButtonClick);
@@ -166,19 +184,26 @@ function initAmountChangeButtons(index, inputItems, dropdownParam) {
     inputItems.paramValues[index] = parseInt(inputItems.paramValues[index]) - 1;
     if (inputItems.paramValues[index] <= 0) {
       inputItems.paramValues[index] = 0;
-      minusButton[0].classList.add('dropdown__small-btn--disabled');
+      changeMinusButtonAvailability(minusButton[0], false);
     }
     paramNumValueElem[0].innerHTML = inputItems.paramValues[index];
     fillInputField(inputItems);
   }
   function handlePlusButtonClick() {
-    if (inputItems.paramValues[index] >= 0) { minusButton[0].classList.remove('dropdown__small-btn--disabled'); }
+    if (inputItems.paramValues[index] >= 0) {
+      changeMinusButtonAvailability(minusButton[0], true);
+    }
     inputItems.paramValues[index] = parseInt(inputItems.paramValues[index], 10) + 1;
     paramNumValueElem[0].innerHTML = inputItems.paramValues[index];
     fillInputField(inputItems);
   }
 }
 
-function disableButton(button) {
-  button.classList.add('dropdown__disabled-btn');
+function changeMinusButtonAvailability(minusButton, isAvailable) {
+  if (isAvailable) {
+    minusButton.classList.remove('dropdown__small-btn--disabled');
+  }
+  else {
+    minusButton.classList.add('dropdown__small-btn--disabled');
+  }
 }

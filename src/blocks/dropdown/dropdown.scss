@@ -9,10 +9,8 @@
   width: 88%;
   padding: 10px 15px;
   color: $dark-shade-75;
-  font-weight: normal;
   font-size: 14px;
   font-family: Montserrat, sans-serif;
-  font-style: normal;
   line-height: 23px;
   border: 1px solid $dark-shade-25;
   border-radius: 2px;
@@ -85,6 +83,7 @@
   font-family: Montserrat, sans-serif;
   line-height: 15px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .dropdown__button-apply {
@@ -92,6 +91,7 @@
 }
 
 .dropdown__small-btn--disabled {
+  cursor: auto;
   opacity: 0.2;
 }
 
