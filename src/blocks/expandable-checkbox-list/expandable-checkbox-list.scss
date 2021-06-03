@@ -3,6 +3,7 @@
 .expandable-checkbox-list__wrapper {
   display: flex;
   justify-content: space-between;
+  width: 97%;
   cursor: pointer;
 }
 
@@ -21,6 +22,10 @@
 
 .expandable-checkbox-list__arrow-rotate {
   transform: rotate(180deg);
+}
+
+.expandable-checkbox-list__menu {
+  margin-top: 12px;
 }
 
 .expandable-checkbox-list__menu--hidden {

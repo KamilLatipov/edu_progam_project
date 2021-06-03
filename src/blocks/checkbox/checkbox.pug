@@ -3,5 +3,8 @@ mixin checkbox( items )
     each item in items
       .checkbox
         label.checkbox__label= item.text
-          input( type="checkbox" )
+          if (item.checked)
+            input( type='checkbox' checked)
+          else
+            input( type='checkbox' )
           span.checkbox__checkmark
