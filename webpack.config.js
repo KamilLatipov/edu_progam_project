@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const webpack = require('webpack');
 
 const htmlPageNames = ['colors&type', 'registration', 'room-details', 'search-page', 'sign-in'];
 const multipleHtmlPlugins = htmlPageNames.map((name) => new HtmlWebpackPlugin({
@@ -63,6 +64,10 @@ module.exports = {
     }),
     new StylelintPlugin({
       fix: true,
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     }),
   ].concat(multipleHtmlPlugins),
   output: {

@@ -1,3 +1,6 @@
+import 'ion-rangeslider';
+import 'ion-rangeslider/css/ion.rangeSlider.min.css'
+
 function importAll(r) {
     r.keys().forEach(r);
 }
