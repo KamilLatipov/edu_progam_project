@@ -2,12 +2,11 @@ mixin room-number(number, numberLarge , isLuxury, price)
   - let roomNumber = ['room-number__number']
   if (numberLarge)
     - roomNumber.push('room-number__number--large')
-  .room-number
-    .room-number__cell
-      span.room-number__text №
-      span(class= roomNumber )= number
-      if (isLuxury)
-        span.room-number__luxury люкс
-    .room-number__cell
-      span.room-number__price= price
-      span.room-number__price.room-number__price--text в сутки
+  .room-number__cell
+    span.room-number__text №
+    span(class= roomNumber )= number
+    if (isLuxury)
+      span.room-number__luxury люкс
+  .room-number__cell.room-number__cell--last
+    span.room-number__price= price
+    span.room-number__price.room-number__price-text в сутки

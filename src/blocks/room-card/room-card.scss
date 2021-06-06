@@ -22,27 +22,26 @@
   width: 90%;
 }
 
-.room-card__row {
+.room-card__price-row {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
-  width: 95%;
-  padding: 7px 0 20px 0;
-}
-
-.room-card__line {
+  width: 96%;
   margin-left: 5px;
   padding: 20px 0 9px 0;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
-.room-card__cell {
+.room-card__rating-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-between;
+  width: 94.5%;
+  padding: 7px 0 20px 0;
 }
 
-.room-card__rating {
-  margin: 0;
+.room-card__cell {
+  display: flex;
 }
 
 .room-card__comments {

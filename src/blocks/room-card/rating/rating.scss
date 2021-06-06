@@ -1,0 +1,15 @@
+@import '../../../style/color';
+
+.room-card__rating {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.room-card__rating-star {
+  width: 24px;
+  height: 24px;
+  color: $purple;
+  font-size: 24px;
+  font-family: 'Material Icons', sans-serif;
+}

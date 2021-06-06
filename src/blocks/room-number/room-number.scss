@@ -3,7 +3,7 @@
 .room-number {
   display: flex;
   justify-content: space-between;
-  width: 240px;
+  width: 95%;
 }
 
 .room-number__number {
@@ -11,28 +11,24 @@
   padding-left: 4px;
   color: $dark-shade-100;
   font-weight: bold;
-  font-size: 18px;
-  font-family: Quicksand, sans-serif;
-
-  &--large {
-    font-size: 20px;
-  }
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
 }
 
 .room-number__text {
   color: $dark-shade-100;
   font-weight: bold;
   font-size: 14px;
-  font-family: Quicksand, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 .room-number__luxury {
   margin: 0;
-  padding-left: 5px;
+  padding-left: 6px;
   color: $purple;
   font-weight: bold;
   font-size: 12px;
-  font-family: Montserrat, 'sans-serif';
+  font-family: Montserrat, sans-serif;
   text-transform: uppercase;
 }
 
@@ -43,13 +39,12 @@
 
 .room-number__price {
   align-self: flex-end;
-  padding-right: 4px;
+  margin-right: 3px;
   color: $dark-shade-50;
   font-weight: bold;
   font-size: 14px;
 
-  &--text {
-    padding-right: 0;
+  &-text {
     color: $dark-shade-50;
     font-weight: normal;
     font-size: 12px;

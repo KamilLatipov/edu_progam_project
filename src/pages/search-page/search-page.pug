@@ -13,20 +13,20 @@ block content
       form.search-page__filter
         .search-page__dropdown
           +dropdown(
-              'Даты пребывания в отеле',
-              'Сколько комнат',
-              'спальня,спальни,спален;кровать,кровати,кроватей;ванная комната,ванные комнаты,ванных комнат',
+              'Гости',
+              'Сколько гостей',
+              'гость,гостя,гостей;младенец,младенца,младенцев',
               [
                 {
-                  parameterName: 'Спальни',
+                  parameterName: 'Взрослые',
                   initCount: 11,
                 },
                 {
-                  parameterName: 'Кровати',
+                  parameterName: 'Дети',
                   initCount: 0,
                 },
                 {
-                  parameterName: 'Ванные комнаты',
+                  parameterName: 'Младенцы',
                   initCount: 1,
                 }
               ],
@@ -104,10 +104,10 @@ block content
             {
               link: "room-1.png",
               number: 888,
-              numberLarge: false,
+              numberLarge: true,
               isLuxury: true,
               price: '9 990₽',
-              rating: 5,
+              rating: 3,
               comments: 145,
             },
             {

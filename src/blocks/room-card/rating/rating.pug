@@ -1,0 +1,7 @@
+mixin rating(ratedStars)
+    - let leftStars = 5 - ratedStars
+    .room-card__rating
+        while (ratedStars--)
+            span.room-card__rating-star.room-card__rating-star--colored star
+        while (leftStars--)
+            span.room-card__rating-star.room-card__rating-star--white star_border
