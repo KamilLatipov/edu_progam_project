@@ -6,6 +6,7 @@ include ../../blocks/room-card/room-card
 include ../../blocks/pagination/pagination
 include ../../blocks/rich-checkbox/rich-checkbox
 include ../../blocks/expandable-checkbox-list/expandable-checkbox-list
+include ../../blocks/range-slider/range-slider
 
 block content
   .search-page
@@ -35,9 +36,15 @@ block content
           )
         .search-page__dropdown
         .search-page__slider
-          h3.search-page__title Диапазон цены
-          input.range-slider
-          p.slider__info
+          +range-slider(
+            'Диапазон цены',
+            {
+              min: 0,
+              max: 10000,
+              from: 1000,
+              to: 5000,
+            }
+          )
         .search-page__checkbox
           h3.search-page__title Правила дома
           +checkbox(

@@ -1,0 +1,10 @@
+@import '../../style/color';
+
+.range-slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-slider__from-to {
+  font-size: 12px;
+}
