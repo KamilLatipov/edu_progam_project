@@ -24,8 +24,9 @@ function initDropdown(dropdown) {
   initDropdownParams(inputItems, dropdownParams);
   fillInputField(inputItems);
 
-  function handleOutsideDropdownClick(event) {
+  function handleOutsideDropdownClick() {
     if (checkClickedOutsideDropdown(event, dropdown, dropdownMenu[0])) {
+      inputField[0].classList.toggle('dropdown__input-field--active');
       dropdownMenu[0].classList.add('dropdown__menu--hidden');
     }
   }
@@ -41,6 +42,8 @@ function initDropdown(dropdown) {
     fillInputField(inputItems);
   }
 }
+
+
 
 function checkClickedOutsideDropdown(event, dropdown, dropdownMenu) {
   return (!dropdown.contains(event.target) && !dropdownMenu.classList.contains('dropdown__menu--hidden'));

@@ -1,6 +1,7 @@
 @import '../../style/color.scss';
 
 .room-card {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -9,6 +10,57 @@
   overflow: hidden;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.room-card__round-switch-btns {
+  position: absolute;
+  top: 120px;
+  right: 13px;
+}
+
+.room-card__round-switch-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 7.5px;
+  height: 7.5px;
+  margin-left: 4px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  filter: drop-shadow(0 5px 5px rgba(31, 32, 65, 0.3));
+
+  &--filled {
+    background-color: white;
+  }
+}
+
+.room-card__visual-part {
+  position: relative;
+}
+
+.room-card__arrow {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 151px;
+  color: white;
+  font-size: 24px;
+  font-family: 'Material Icons', sans-serif;
+  cursor: pointer;
+
+  &-left {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &-right {
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
 }
 
 .room-card__img {

@@ -1,0 +1,18 @@
+@import '../../style/color';
+
+.js-datepicker__input {
+  width: 88%;
+  padding: 10px 15px;
+  color: $dark-shade-75;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  line-height: 24px;
+  text-transform: lowercase;
+  border: 1px solid $dark-shade-25;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:focus {
+    border: 1px solid $dark-shade-50;
+  }
+}

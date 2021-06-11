@@ -24,5 +24,18 @@ $('.range-slider__input').ionRangeSlider({
 });
 
 function changeSliderFromToElem (data) {
-    FromToElem[0].innerHTML = data.from + '₽' + ' - ' + data.to + '₽';
+    FromToElem[0].innerHTML = divideThousandthsFromRemainder(data.from) + '₽' + ' - ' + divideThousandthsFromRemainder(data.to) + '₽';
+}
+
+function divideThousandthsFromRemainder(number) {
+    let initNumber = number.toString();
+    let dividedNumber = initNumber;
+    if (number >= 1000) {
+        dividedNumber = Math.floor(number / 1000);
+        dividedNumber += ' ';
+        dividedNumber += initNumber.substring(initNumber.length - 3);
+        return dividedNumber;
+    }
+    else
+        return dividedNumber;
 }
