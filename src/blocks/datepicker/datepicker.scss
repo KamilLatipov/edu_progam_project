@@ -16,3 +16,166 @@
     border: 1px solid $dark-shade-50;
   }
 }
+
+.datepicker {
+  box-sizing: border-box;
+  width: 320px !important;
+  height: 369px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--nav {
+  justify-content: space-between !important;
+  width: 284px;
+  margin: 11px auto 0 auto;
+  border-bottom: none !important;
+}
+
+.datepicker--nav-title {
+  margin: 0 auto;
+  color: $dark-shade-100;
+  font-weight: bold;
+  font-size: 19px;
+  font-family: Montserrat, sans-serif;
+
+  & > i {
+    color: $dark-shade-100 !important;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: Montserrat, sans-serif;
+  }
+}
+
+.datepicker__nav-arrow {
+  width: 24px;
+  height: 24px;
+  color: $purple;
+  font-size: 24px;
+  font-family: 'Material Icons';
+  line-height: 20px;
+
+  &--rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.datepicker--content {
+  display: flex;
+  justify-content: center;
+  margin-top: 23px;
+}
+
+.datepicker--days {
+  width: 280px;
+}
+
+.datepicker--day-name {
+  display: inline-block !important;
+  height: 24px;
+  color: $purple !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  font-family: Montserrat, sans-serif;
+  line-height: 15px;
+  text-transform: capitalize !important;
+}
+
+.datepicker--cells {
+  align-items: baseline;
+  height: 200px;
+}
+
+.datepicker--cell {
+  color: $dark-shade-50;
+  font-size: 12px;
+  font-family: Montserrat, sans-serif;
+  line-height: 15px;
+}
+
+.datepicker--cell-day {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.datepicker--cell.-in-range- {
+  color: $dark-shade-50 !important;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%) !important;
+}
+
+.datepicker--cell.-selected- {
+  font-weight: bold;
+  background: $gradient !important;
+  border-radius: 22px !important;
+}
+
+.datepicker--cell.-range-from-.-selected- {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    content: '';
+  }
+}
+
+.datepicker--cell.-range-to-.-selected- {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    content: '';
+  }
+}
+
+.datepicker--cell.-current- {
+  color: white !important;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 50%;
+}
+
+.datepicker--buttons {
+  flex-grow: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: white;
+  border-top: none !important;
+}
+
+.datepicker--button-apply {
+  width: 84px !important;
+  color: $purple;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.datepicker--button {
+  display: block !important;
+  flex: none !important;
+  width: 72px;
+  height: 24px !important;
+  color: $purple !important;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+}

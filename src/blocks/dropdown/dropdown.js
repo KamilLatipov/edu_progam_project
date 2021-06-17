@@ -24,16 +24,18 @@ function initDropdown(dropdown) {
   initDropdownParams(inputItems, dropdownParams);
   fillInputField(inputItems);
 
-  function handleOutsideDropdownClick() {
+  function handleOutsideDropdownClick(event) {
     if (checkClickedOutsideDropdown(event, dropdown, dropdownMenu[0])) {
       inputField[0].classList.toggle('dropdown__input-field--active');
       dropdownMenu[0].classList.add('dropdown__menu--hidden');
     }
   }
-  function handleInputFieldClick() {
+
+  function handleInputFieldClick(event) {
     inputField[0].classList.toggle('dropdown__input-field--active');
     dropdownMenu[0].classList.toggle('dropdown__menu--hidden');
   }
+
   function handleClearButtonClick(event) {
     event.preventDefault();
     clearButton[0].classList.add('dropdown__button-clr--hidden');
@@ -99,6 +101,7 @@ function checkTotalAmountIsZero(paramValues) {
   paramValues.forEach((value) => {
     count += parseInt(value);
   });
+
   return (count);
 }
 
@@ -135,11 +138,11 @@ function getInputField(paramValues, inputFieldValues) {
 function findSuitableTextForm(textForms, paramValue) {
   textForms = textForms.split(',');
   paramValue = parseInt(paramValue);
-  if (paramValue == 0) {
+  if (paramValue === 0) {
     return ('');
   }
   if (paramValue > 20) {
-    return (`${paramValue} ${getSuitableForm(paramValue % 10, textForms)}`);
+    return (`${ paramValue } ${ getSuitableForm(paramValue % 10, textForms) }`);
   }
 
   return (`${paramValue} ${getSuitableForm(paramValue, textForms)}`);
