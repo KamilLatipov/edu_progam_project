@@ -1,1 +1,1 @@
-import './footer-nav.scss'
+import './footer-nav.scss';

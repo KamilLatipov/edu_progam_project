@@ -1,5 +1,5 @@
 const dropdowns = document.getElementsByClassName('dropdown');
-Array.from(dropdowns).forEach(dropdown => {
+Array.from(dropdowns).forEach((dropdown) => {
   initDropdown(dropdown);
 });
 
@@ -21,7 +21,10 @@ function initDropdown(dropdown) {
   window.addEventListener('click', handleOutsideDropdownClick);
   inputField[0].addEventListener('click', handleInputFieldClick);
   clearButton[0].addEventListener('click', handleClearButtonClick);
-  initDropdownParams(inputItems, dropdownParams);
+  Array.from(dropdownParams).forEach((dropdownParam, index) => {
+    inputItems.paramValues[index] = initDropdownParams(inputItems, dropdownParam, index);
+  });
+
   fillInputField(inputItems);
 
   function handleOutsideDropdownClick(event) {
@@ -31,7 +34,7 @@ function initDropdown(dropdown) {
     }
   }
 
-  function handleInputFieldClick(event) {
+  function handleInputFieldClick() {
     inputField[0].classList.toggle('dropdown__input-field--active');
     dropdownMenu[0].classList.toggle('dropdown__menu--hidden');
   }
@@ -39,35 +42,27 @@ function initDropdown(dropdown) {
   function handleClearButtonClick(event) {
     event.preventDefault();
     clearButton[0].classList.add('dropdown__button-clr--hidden');
-    clearParamValues(inputItems);
+    inputItems.paramValues.forEach((paramValue, index) => {
+      paramValues[index] = 0;
+    });
     clearParamInnerHtml(dropdownParams);
     fillInputField(inputItems);
   }
 }
 
-
-
 function checkClickedOutsideDropdown(event, dropdown, dropdownMenu) {
   return (!dropdown.contains(event.target) && !dropdownMenu.classList.contains('dropdown__menu--hidden'));
 }
 
-function initDropdownParams(inputItems, dropdownParams) {
-  Array.from(dropdownParams).forEach((dropdownParam, index) => {
-    inputItems.paramValues[index] = parseInt(getParamValue(dropdownParam));
-    initAmountChangeButtons(index, inputItems, dropdownParam);
-  });
-}
-
-function clearParamValues({ paramValues, ...rest }) {
-  paramValues.forEach((paramValue, index) => {
-    paramValues[index] = 0;
-  });
+function initDropdownParams(inputItems, dropdownParam, index) {
+  initAmountChangeButtons(index, inputItems, dropdownParam);
+  return (parseInt(getParamValue(dropdownParam), 10));
 }
 
 function clearParamInnerHtml(dropdownParams) {
   let dropdownParamValue = HTMLElement;
   let minusButton = HTMLElement;
-  Array.from(dropdownParams).forEach((dropdownParam, index) => {
+  Array.from(dropdownParams).forEach((dropdownParam) => {
     dropdownParamValue = dropdownParam.getElementsByClassName('dropdown__num-value');
     minusButton = dropdownParam.getElementsByClassName('dropdown__minus-btn');
     dropdownParamValue[0].innerHTML = 0;
@@ -79,8 +74,7 @@ function fillInputField({ paramValues, inputFieldPlaceholder, inputFieldValues, 
   if (!checkTotalAmountIsZero(paramValues)) {
     inputField.placeholder = inputFieldPlaceholder;
     clearButton.classList.add('dropdown__button-clr--hidden');
-  }
-  else {
+  } else {
     inputField.placeholder = getInputField(paramValues, inputFieldValues);
     if (clearButton.classList.contains('dropdown__button-clr--hidden')) {
       clearButton.classList.remove('dropdown__button-clr--hidden');
@@ -99,7 +93,7 @@ function checkTotalAmountIsZero(paramValues) {
   let count = 0;
 
   paramValues.forEach((value) => {
-    count += parseInt(value);
+    count += parseInt(value, 10);
   });
 
   return (count);
@@ -112,8 +106,8 @@ function getInputField(paramValues, inputFieldValues) {
   let isComma = '';
   let i = 0;
   if (inputFieldValues.length < paramValues.length) {
-    for (; i < paramValues.length - 1; i++) {
-      sumAmount += parseInt(paramValues[i]);
+    for (; i < paramValues.length - 1; i += 1) {
+      sumAmount += parseInt(paramValues[i], 10);
     }
     suitableTextForm = findSuitableTextForm(inputFieldValues[0], sumAmount);
     inputField += suitableTextForm;
@@ -122,9 +116,8 @@ function getInputField(paramValues, inputFieldValues) {
     }
     suitableTextForm = findSuitableTextForm(inputFieldValues[1], paramValues[i]);
     inputField += suitableTextForm;
-  }
-  else {
-    for (i = 0; i < paramValues.length; i++) {
+  } else {
+    for (i = 0; i < paramValues.length; i += 1) {
       if (paramValues[i] !== 0 && inputField !== '') { isComma = ', '; } else { isComma = ''; }
       suitableTextForm = findSuitableTextForm(inputFieldValues[i], paramValues[i]);
       inputField += isComma;
@@ -136,31 +129,32 @@ function getInputField(paramValues, inputFieldValues) {
 }
 
 function findSuitableTextForm(textForms, paramValue) {
-  textForms = textForms.split(',');
-  paramValue = parseInt(paramValue);
-  if (paramValue === 0) {
+  const textFormsArr = textForms.split(',');
+  const paramValueInt = parseInt(paramValue, 10);
+  if (paramValueInt === 0) {
     return ('');
   }
-  if (paramValue > 20) {
-    return (`${ paramValue } ${ getSuitableForm(paramValue % 10, textForms) }`);
+  if (paramValueInt > 20) {
+    return (`${paramValueInt} ${getSuitableForm(paramValueInt % 10, textFormsArr)}`);
   }
 
-  return (`${paramValue} ${getSuitableForm(paramValue, textForms)}`);
+  return (`${paramValueInt} ${getSuitableForm(paramValueInt, textFormsArr)}`);
 }
 
-function getSuitableForm(paramValue, textForms) {
+function getSuitableForm(paramValue, [firstForm, secondForm, thirdForm]) {
   let suitableTextForm = '';
+  console.log(firstForm, secondForm, thirdForm);
   switch (paramValue) {
     case 1:
-      suitableTextForm = textForms[0];
+      suitableTextForm = firstForm;
       break;
     case 2:
     case 3:
     case 4:
-      suitableTextForm = textForms[1];
+      suitableTextForm = secondForm;
       break;
     default:
-      suitableTextForm = textForms[2];
+      suitableTextForm = thirdForm;
   }
   return (suitableTextForm);
 }
@@ -188,7 +182,7 @@ function initAmountChangeButtons(index, inputItems, dropdownParam) {
   plusButton[0].addEventListener('click', handlePlusButtonClick);
 
   function handleMinusButtonClick() {
-    inputItems.paramValues[index] = parseInt(inputItems.paramValues[index]) - 1;
+    inputItems.paramValues[index] = parseInt(inputItems.paramValues[index], 10) - 1;
     if (inputItems.paramValues[index] <= 0) {
       inputItems.paramValues[index] = 0;
       changeMinusButtonAvailability(minusButton[0], false);
@@ -209,8 +203,7 @@ function initAmountChangeButtons(index, inputItems, dropdownParam) {
 function changeMinusButtonAvailability(minusButton, isAvailable) {
   if (isAvailable) {
     minusButton.classList.remove('dropdown__small-btn--disabled');
-  }
-  else {
+  } else {
     minusButton.classList.add('dropdown__small-btn--disabled');
   }
 }

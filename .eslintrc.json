@@ -1,3 +1,23 @@
 {
-  "extends": "airbnb"
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": [
+    "airbnb/base",
+    "plugin:fsd/all"
+  ],
+  "plugins": [
+    "fsd"
+  ],
+  "rules": {
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "no-param-reassign": [2, { "props": false }]
+  }
 }

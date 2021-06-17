@@ -67,7 +67,7 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
     }),
   ].concat(multipleHtmlPlugins),
   output: {
