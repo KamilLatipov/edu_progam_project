@@ -1,14 +1,23 @@
 @import '../../style/color.scss';
 
-.rich-checkbox {
-  margin-bottom: 12px;
+.rich-checkbox__block {
+  margin-top: 11px;
+
+  &:last-child {
+    margin-top: 9.5px;
+
+    & .rich-checkbox__subtext {
+      width: 225px;
+    }
+  }
 }
 
 .rich-checkbox__subtext {
-  width: 225px;
-  margin-bottom: 5px;
-  padding-left: 35px;
+  width: 205px;
+  margin-top: 5px;
+  padding-left: 30px;
   color: $dark-shade-50;
+  font-size: 12px;
   line-height: 14px;
 }
 

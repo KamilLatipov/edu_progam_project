@@ -1,3 +1,4 @@
-mixin datepicker()
+mixin datepicker(title)
     .js-datepicker
+        h3.js-datepicker__title= title
         input(type='text' readonly).js-datepicker__input

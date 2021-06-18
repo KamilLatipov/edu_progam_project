@@ -1,5 +1,5 @@
-include ../short-button/short-button
-include ../long-button/long-button
+include ../button/button
+include ../button-with-arrow/button-width-arrow
 
 mixin header-nav(nav, isAuth, name)
   .header-nav
@@ -16,6 +16,6 @@ mixin header-nav(nav, isAuth, name)
         p.header__acc-name= name
       else
         .header-nav__enter
-          +short-button('Войти', 'common')
+          +button('Войти', 'common')
         .header-nav__registration
-          +short-button('Зарегистрироваться', 'gradient')
+          +button('Зарегистрироваться', 'gradient')

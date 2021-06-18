@@ -1,5 +1,5 @@
 include ../room-number/room-number
-include ../long-button/long-button
+include ../button-with-arrow/button-width-arrow
 
 mixin book-card(number, price, buttonName)
   .book-card
@@ -23,4 +23,4 @@ mixin book-card(number, price, buttonName)
           .book-card__line
           h2.book-card__total 38 081₽
       .book-card__button
-        +long-button(buttonName)
+        +button-with-arrow(buttonName)

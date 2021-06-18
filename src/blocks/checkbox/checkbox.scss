@@ -1,7 +1,7 @@
 @import "../../style/color.scss";
 
-.checkbox {
-  margin-bottom: 10.2px;
+.checkbox__block {
+  margin-bottom: 13px;
 }
 
 .checkbox__label {
@@ -16,6 +16,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  &:last-child {
+    line-height: 18px;
+  }
 }
 
 .checkbox__label input {
@@ -28,8 +32,8 @@
 
 .checkbox__checkmark {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: 1px;
   box-sizing: border-box;
   width: 20px;
   height: 20px;

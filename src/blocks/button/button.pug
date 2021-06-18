@@ -1,0 +1,9 @@
+mixin button(text, background)
+  - let button = ['button']
+  if (background === 'common')
+    - button.push('button--common')
+  else if (background === 'gradient')
+    - button.push('button--gradient')
+  else if (background === 'none')
+    - button.push('button--text')
+  button(class=button)= text

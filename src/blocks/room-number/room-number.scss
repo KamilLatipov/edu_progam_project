@@ -3,7 +3,7 @@
 .room-number {
   display: flex;
   justify-content: space-between;
-  width: 95%;
+  width: 100%;
 }
 
 .room-number__number {
@@ -24,7 +24,7 @@
 
 .room-number__luxury {
   margin: 0;
-  padding-left: 6px;
+  padding: 2px 0 0 8px;
   color: $purple;
   font-weight: bold;
   font-size: 12px;

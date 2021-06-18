@@ -14,7 +14,7 @@ $('.js-range-slider__input').ionRangeSlider({
   max,
   from,
   to,
-  step: 100,
+  step: 1000,
   onStart(data) {
     changeSliderFromToElem(data);
   },

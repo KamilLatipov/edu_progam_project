@@ -1,7 +1,7 @@
 mixin checkbox( items )
   .checkbox
     each item in items
-      .checkbox
+      .checkbox__block
         label.checkbox__label= item.text
           if (item.checked)
             input( type='checkbox' checked)

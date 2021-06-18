@@ -1,7 +1,7 @@
 const datepicker = document.getElementsByClassName('js-datepicker__input');
 const datepickerTitle = document.getElementsByClassName('datepicker--nav-title');
 
-datepicker[0].value = '19 июн - 23 авг';
+datepicker[0].value = '19 авг - 23 авг';
 
 $('.js-datepicker__input').datepicker({
   range: true,

@@ -1,7 +1,0 @@
-mixin short-button(text, background)
-  - let button = ['short-button']
-  if (background === 'common')
-    - button.push('short-button--common')
-  else if (background === 'gradient')
-    - button.push('short-button--gradient')
-  button(class= button)= text

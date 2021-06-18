@@ -5,7 +5,7 @@ mixin room-card(list)
   each item in list
     .room-card
       if item.switchable
-        .room-card__visual-part
+        .room-card__switchable-part
           .room-card__arrow.room-card__arrow-left chevron_left
           img.room-card__img(src=require(`../../images/${item.link}`))
           .room-card__arrow.room-card__arrow-right chevron_left
@@ -23,5 +23,5 @@ mixin room-card(list)
           .room-card__cell
             +rating(item.rating)
           .room-card__cell
-            p.room-card__comments= item.comments
-            p.room-card__comments--text Отзывов
+            p.room-card__comments-amount= item.comments
+            p.room-card__comments Отзывов

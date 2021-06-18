@@ -1,7 +1,9 @@
-mixin rich-checkbox( { title, items} )
-  each item in items
-    .rich-checkbox
-      label.rich-checkbox__label= item.text
-        input( type="checkbox" )
-        span.rich-checkbox__checkmark
-      p.rich-checkbox__subtext= item.subtext
+mixin rich-checkbox( title, items )
+  .rich-checkbox
+    h3.rich-checkbox__title= title
+    each item in items
+      .rich-checkbox__block
+        label.rich-checkbox__label= item.text
+          input( type="checkbox" )
+          span.rich-checkbox__checkmark
+        p.rich-checkbox__subtext= item.subtext

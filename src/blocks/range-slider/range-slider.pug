@@ -4,4 +4,4 @@ mixin range-slider(title, sliderOptions, text)
             h3.range-slider__title= title
             .range-slider__from-to
         input(data-from = sliderOptions.from, data-to = sliderOptions.to, data-min = sliderOptions.min, data-max = sliderOptions.max).js-range-slider__input
-        p.range-slider__text
+        p.range-slider__text= text

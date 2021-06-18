@@ -1,6 +1,6 @@
 include ../text-field/text-field
-include ../long-button/long-button
-include ../short-button/short-button
+include ../button-with-arrow/button-width-arrow
+include ../button/button
 
 
 mixin sign-in-card
@@ -13,8 +13,8 @@ mixin sign-in-card
         .sign-in-card__item
           +text-field('password', 'Пароль')
       .sign-in-card__button
-        +long-button('Войти')
+        +button-with-arrow('Войти')
       .sign-in-card__registration
         p.sign-in-card__text Нет аккаунта на Toxin?
         .sign-in-card__registration-button
-          +short-button('Создать', 'common')
+          +button('Создать', 'common')

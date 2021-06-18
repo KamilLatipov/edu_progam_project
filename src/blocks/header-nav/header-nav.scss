@@ -2,7 +2,8 @@
 
 .header-nav {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 

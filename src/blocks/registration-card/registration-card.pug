@@ -1,8 +1,8 @@
 include ../text-field/text-field
 include ../radio-buttons/radio-buttons
 include ../toggle/toggle
-include ../long-button/long-button
-include ../short-button/short-button
+include ../button-with-arrow/button-width-arrow
+include ../button/button
 
 mixin registration-card
   .registration-card
@@ -34,8 +34,8 @@ mixin registration-card
           .registration-card__item
             +toggle('Получать спецпредложения')
         .registration-card__button
-          +long-button('Перейти к оплате')
+          +button-with-arrow('Перейти к оплате')
         .registration-card__enter
           p.registration-card__text Уже есть аккаунт на Toxin
           .registration-card__enter-button
-            +short-button('Войти', 'common')
+            +button('Войти', 'common')

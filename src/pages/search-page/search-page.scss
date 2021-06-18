@@ -2,33 +2,57 @@
   display: flex;
   justify-content: space-between;
   max-width: 1161px;
-  margin: 14px auto;
+  margin: 27px auto 14px;
   padding-bottom: 70px;
 }
 
+.search-page__filter {
+  max-width: 266px;
+}
+
 .search-page__main {
-  width: 72%;
-  margin-top: 15px;
+  width: 71.9%;
+  margin-top: 4px;
+  padding-left: 3px;
 }
 
 .search-page__title {
   margin-bottom: 13px;
 }
 
+.search-page__datepicker {
+  margin-bottom: 16.5px;
+}
+
 .search-page__dropdown {
-  width: 266px;
+  margin-bottom: 30px;
+
+  &:nth-last-child(2) {
+    margin-bottom: 25px;
+  }
+}
+
+.search-page__range-slider {
+  margin-bottom: 20px;
+}
+
+.search-page__checkbox {
+  margin-bottom: 27.5px;
+}
+
+.search-page__rich-checkbox {
+  margin-bottom: 26px;
 }
 
 .search-page__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  width: 99.8%;
   margin-top: 22px;
 }
 
 .search-page__pagination {
-  display: flex;
   max-width: 255px;
-  margin: 20px auto 0;
+  margin: 23px auto 0;
 }
