@@ -1,0 +1,6 @@
+mixin separated-datepicker(firstLabel, secondLabel, firstPlaceholder, secondPlaceholder)
+    .separated-datepicker
+        label.separated-datepicker__label= firstLabel
+            input(type=text class='js-separated-datepicker__first' placholder=firstPlaceholder)
+        label.separated-datepicker__label= secondLabel
+            input(type=text class='js-separated-datepicker__second' placholder=secondPlaceholder)

@@ -18,14 +18,3 @@ $('.js-datepicker__input').datepicker({
     datepickerTitle[0].innerHTML = datepickerTitle[0].innerHTML.toString().replace(/[\s.,%]/g, ' ');
   },
 });
-
-const airDatepicker = document.getElementsByClassName('datepicker');
-const airDatepickerButtons = airDatepicker[0].getElementsByClassName('datepicker--buttons');
-addApplyButton(airDatepickerButtons[0]);
-
-function addApplyButton(buttonsElem) {
-  const applyButton = document.createElement('div');
-  applyButton.classList.add('datepicker--button-apply');
-  applyButton.innerHTML = 'Применить';
-  buttonsElem.append(applyButton);
-}

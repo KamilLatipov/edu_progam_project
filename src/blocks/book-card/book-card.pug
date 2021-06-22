@@ -1,13 +1,37 @@
 include ../room-number/room-number
 include ../button-with-arrow/button-width-arrow
+include ../separated-datepicker/separated-datepicker
+include ../dropdown/dropdown
 
 mixin book-card(number, price, buttonName)
   .book-card
     form.book-card__container
       .book-card__info
         +room-number(number, true, price)
-      .book-card__calender
-      .book-card__guests
+      .book-card__datepicker
+        +separated-datepicker('Прибытие', 'Выезад')
+      .book-card__dropdown
+        +dropdown(
+          'Гости',
+          'Сколько гостей',
+          'гость,гостя,гостей;младенец,младенца,младенцев',
+          [
+            {
+              parameterName: 'Взрослые',
+              initCount: 3,
+            },
+            {
+              parameterName: 'Дети',
+              initCount: 0,
+            },
+            {
+              parameterName: 'Младенцы',
+              initCount: 1,
+            }
+          ],
+          true,
+          true
+        )
       .book-card__bill
         .book-card__row
           p.book-card__cell 9 990₽ х 4 суток
