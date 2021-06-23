@@ -1,0 +1,37 @@
+@import '../../style/color.scss';
+
+.separated-datepicker {
+  display: flex;
+  justify-content: space-between;
+}
+
+.separated-datepicker__label {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  color: #1f2041;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  line-height: 15px;
+}
+
+.js-separated-datepicker {
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  margin-top: 5px;
+  padding: 4px 14px 6px;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  font-family: Montserrat, Arial, sans-serif;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.separated-datepicker__arrow {
+  position: absolute;
+  top: 30px;
+  right: 9px;
+}

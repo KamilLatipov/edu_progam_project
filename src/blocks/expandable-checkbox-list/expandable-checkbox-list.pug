@@ -1,9 +1,9 @@
 include ../checkbox/checkbox
 
-mixin expandable-checkbox-list( title, items, arrow_icon )
+mixin expandable-checkbox-list( title, items, arrowIcon )
     .expandable-checkbox-list
         .expandable-checkbox-list__wrapper
             h3.expandable-checkbox-list__title= title
-            span.expandable-checkbox-list__arrow= arrow_icon
+            span.arrow.expandable-checkbox-list__arrow= arrowIcon
         .expandable-checkbox-list__menu.expandable-checkbox-list__menu--hidden
             +checkbox(items)

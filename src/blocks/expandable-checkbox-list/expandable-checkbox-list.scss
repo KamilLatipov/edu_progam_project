@@ -11,16 +11,16 @@
   user-select: none;
 }
 
-.expandable-checkbox-list__arrow {
+.arrow {
   display: flex;
   color: $dark-shade-50;
   font-size: 24px;
-  font-family: Material Icons, sans-serif;
+  font-family: "Material Icons";
   line-height: 24px;
   transition: transform 0.5s ease;
 }
 
-.expandable-checkbox-list__arrow-rotate {
+.arrow__rotate {
   transform: rotate(180deg);
 }
 
