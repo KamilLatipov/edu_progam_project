@@ -13,6 +13,10 @@
   font-weight: bold;
   font-size: 19px;
   font-family: Montserrat, sans-serif;
+
+  &--large {
+    font-size: 24px;
+  }
 }
 
 .room-number__text {

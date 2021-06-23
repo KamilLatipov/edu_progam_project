@@ -7,7 +7,7 @@ mixin book-card(number, price, buttonName)
   .book-card
     form.book-card__container
       .book-card__info
-        +room-number(number, true, price)
+        +room-number(number, true, price, true)
       .book-card__datepicker
         +separated-datepicker('ПРИБЫТИЕ', 'ВЫЕЗД', '19.08.2019', '23.08.2019', 'keyboard_arrow_down')
       .book-card__dropdown
@@ -33,15 +33,16 @@ mixin book-card(number, price, buttonName)
           true
         )
       .book-card__bill
-        .book-card__row
-          p.book-card__cell 9 990₽ х 4 суток
-          p.book-card__total 39 960₽
-        .book-card__row
-          p.book-card__cell.book-card__more-details Сбор за услуги: скидка 2 179₽
-          p.book-card__total 0₽
-        .book-card__row
-          p.book-card__cell.book-card__more-details.book-card__cell--last Сбор за дополнительные услуги
-          p.book-card__total 300₽
+        .book-card__wrapper
+          .book-card__row
+            p.book-card__cell 9 990₽ х 4 суток
+            p.book-card__total 39 960₽
+          .book-card__row
+            p.book-card__cell.book-card__more-details Сбор за услуги: скидка 2 179₽
+            p.book-card__total 0₽
+          .book-card__row
+            p.book-card__cell.book-card__more-details.book-card__cell--last Сбор за дополнительные услуги
+            p.book-card__total 300₽
         .book-card__last-row
           h2.book-card__text Итого
           .book-card__line
