@@ -36,6 +36,7 @@
   width: 40px;
   height: 40px;
   margin: 0;
+  cursor: pointer;
 }
 
 .pagination__next-page {
@@ -44,6 +45,7 @@
   font-family: 'Material Icons';
   line-height: 20px;
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  cursor: pointer;
 }
 
 .pagination__text {

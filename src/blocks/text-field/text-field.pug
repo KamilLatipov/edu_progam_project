@@ -1,2 +1,4 @@
 mixin text-field(type, placeholder, isMasked)
-  input(type=type placeholder=placeholder class='text-field')
+    .text-field
+        input(type=type placeholder=placeholder).text-field__input
+        button.text-field__arrow arrow_forward
