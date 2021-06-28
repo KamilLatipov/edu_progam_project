@@ -1,0 +1,17 @@
+mixin pie-chart(sumAmount, ratings, title)
+    .pie-chart
+        h2.pie-chart__title= title
+        .pie-chart__wrapper
+            svg(data-sum-amount=sumAmount width='126' height='126').pie-chart__circle
+                defs
+                    each rating in ratings
+                        linearGradient(id = rating.name gradientTransform="rotate(180)")
+                            stop(offset='0%' stop-color=rating.startColor)
+                            stop(offset='100%' stop-color=rating.endColor)
+                each rating in ratings
+                    circle(cx="60" cy="63" r="58" stroke=`url(#${rating.name})` stroke-width="3" fill="none" data-amount=rating.amount).pie-chart__arc
+            .pie-chart__ratings
+                p.pie-chart__rating.pie-chart__five Великолепно
+                p.pie-chart__rating.pie-chart__four Хорошо
+                p.pie-chart__rating.pie-chart__three Удовлетворительно
+                p.pie-chart__rating.pie-chart__two Разочарован

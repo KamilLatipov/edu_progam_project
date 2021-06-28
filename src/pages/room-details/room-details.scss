@@ -37,6 +37,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 711px;
+  margin-top: 2px;
 }
 
 .room-detail__info-block {
@@ -48,7 +49,8 @@
 }
 
 .room-detail__impression {
-  width: 50%;
+  width: 44%;
+  margin-left: 106px;
 }
 
 .room-detail__rev-block {
@@ -57,7 +59,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 10px 0 16px 0;
+  margin: 8px 0 16px 0;
 }
 
 .room-detail__reviews {

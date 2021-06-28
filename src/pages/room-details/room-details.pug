@@ -4,6 +4,7 @@ include ../../blocks/room-information/room-information
 include ../../blocks/reviews/reviews
 include ../../blocks/bullet/bullet
 include ../../blocks/book-card/book-card
+include ../../blocks/pie-chart/pie-chart
 
 block content
   main.room-detail
@@ -37,6 +38,36 @@ block content
             ]
             })
         .room-detail__impression
+          +pie-chart(
+            1040,
+            [
+              {
+                name: '4',
+                amount: 260,
+                startColor: '#6FCF97',
+                endColor: '#66D2EA',
+              },
+              {
+                name: '5',
+                amount: 520,
+                startColor: '#FFE39C',
+                endColor: '#FFBA9C',
+              },
+              {
+                name: '3',
+                amount: 260,
+                startColor: '#BC9CFF',
+                endColor: '#8BA4F9',
+              },
+              {
+                name: '2',
+                amount: 0,
+                startColor: '#909090',
+                endColor: '#3D4975',
+              }
+            ],
+            'Впечатления от номера'
+          )
         .room-detail__rev-block
           h2.room-detail__title Отзывы посетителей номера
           p.room-detail--light-text 2 отзыва

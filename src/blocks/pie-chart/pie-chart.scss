@@ -1,0 +1,11 @@
+.pie-chart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pie-chart__wrapper {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
