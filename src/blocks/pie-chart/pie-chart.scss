@@ -1,3 +1,5 @@
+@import '../../style/color';
+
 .pie-chart {
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +8,48 @@
 
 .pie-chart__wrapper {
   display: flex;
-  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 99.5%;
   margin-top: 20px;
+}
+
+.pie-chart__rating {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 6.5px;
+    left: -14.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    content: '';
+  }
+}
+
+.pie-chart {
+  &__five {
+    &::before {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+  }
+
+  &__four {
+    &::before {
+      background: $secondary-gradient;
+    }
+  }
+
+  &__three {
+    &::before {
+      background: $gradient;
+    }
+  }
+
+  &__two {
+    &::before {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+  }
 }

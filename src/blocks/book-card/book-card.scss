@@ -60,7 +60,7 @@
   &::after {
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -11px;
     width: 19px;
     height: 19px;
     color: $dark-shade-25;
@@ -71,6 +71,7 @@
     text-align: center;
     border: 1px solid $dark-shade-25;
     border-radius: 50%;
+    cursor: pointer;
     content: 'i';
   }
 }

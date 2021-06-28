@@ -59,11 +59,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 8px 0 16px 0;
+  margin: 10px 0 14px 0;
 }
 
 .room-detail__reviews {
-  padding: 18px 0;
+  padding: 17px 0 18px;
 }
 
 .room-detail__bullet-block {
@@ -88,4 +88,8 @@
 .room-detail--light-text {
   padding-top: 5px;
   color: $dark-shade-50;
+}
+
+.room-detail__book {
+  margin-top: 2px;
 }
