@@ -1,4 +1,5 @@
-mixin text-field(type, placeholder, isMasked)
+mixin text-field(type, placeholder, isSubscription)
     .text-field
         input(type=type placeholder=placeholder).text-field__input
-        button.text-field__arrow arrow_forward
+        if isSubscription
+            button.text-field__arrow arrow_forward

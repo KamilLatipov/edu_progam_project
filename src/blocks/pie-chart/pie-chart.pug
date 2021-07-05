@@ -10,6 +10,9 @@ mixin pie-chart(sumAmount, ratings, title)
                             stop(offset='100%' stop-color=rating.endColor)
                 each rating in ratings
                     circle(cx="60" cy="63" r="58" stroke=`url(#${rating.name})` stroke-width="3" fill="none" data-amount=rating.amount).pie-chart__arc
+            .pie-chart__rating-amount
+                p.pie-chart__amount 260
+                p.pie-chart__text голосов
             .pie-chart__ratings
                 p.pie-chart__rating.pie-chart__five Великолепно
                 p.pie-chart__rating.pie-chart__four Хорошо

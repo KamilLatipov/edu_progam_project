@@ -7,11 +7,34 @@
 }
 
 .pie-chart__wrapper {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 99.5%;
   margin-top: 20px;
+}
+
+.pie-chart__rating-amount {
+  position: absolute;
+  top: 40px;
+  left: 28.5px;
+  text-align: center;
+}
+
+.pie-chart__amount {
+  color: $purple;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.pie-chart__text {
+  color: $purple;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .pie-chart__rating {
