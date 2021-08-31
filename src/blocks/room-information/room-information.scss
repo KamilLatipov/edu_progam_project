@@ -1,6 +1,7 @@
 @import '../../style/color.scss';
 
 .room-information__title {
+  margin: 0;
   font-weight: bold;
 }
 
@@ -11,7 +12,7 @@
   height: 48px;
   margin-right: 10px;
   font-size: 48px;
-  font-family: 'Material Icons';
+  font-family: 'Material Icons', Arial, sans-serif;
   background: $gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,10 +34,6 @@
 .room-information__texts {
   display: flex;
   flex-direction: column;
-}
-
-.room-information__title {
-  margin: 0;
 }
 
 .room-information__text {

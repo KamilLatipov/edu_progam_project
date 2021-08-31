@@ -4,6 +4,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  &__five {
+    &::before {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+  }
+
+  &__four {
+    &::before {
+      background: $secondary-gradient;
+    }
+  }
+
+  &__three {
+    &::before {
+      background: $gradient;
+    }
+  }
+
+  &__two {
+    &::before {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+  }
 }
 
 .pie-chart__wrapper {
@@ -48,31 +72,5 @@
     height: 10px;
     border-radius: 50%;
     content: '';
-  }
-}
-
-.pie-chart {
-  &__five {
-    &::before {
-      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-    }
-  }
-
-  &__four {
-    &::before {
-      background: $secondary-gradient;
-    }
-  }
-
-  &__three {
-    &::before {
-      background: $gradient;
-    }
-  }
-
-  &__two {
-    &::before {
-      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-    }
   }
 }

@@ -1,5 +1,14 @@
 @import '../../style/color.scss';
 
+.rich-checkbox__subtext {
+  width: 205px;
+  margin-top: 5px;
+  padding-left: 30px;
+  color: $dark-shade-50;
+  font-size: 12px;
+  line-height: 14px;
+}
+
 .rich-checkbox__block {
   margin-top: 11px;
 
@@ -12,13 +21,20 @@
   }
 }
 
-.rich-checkbox__subtext {
-  width: 205px;
-  margin-top: 5px;
-  padding-left: 30px;
-  color: $dark-shade-50;
-  font-size: 12px;
-  line-height: 14px;
+.rich-checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+
+  &::after {
+    position: absolute;
+    display: none;
+    content: "";
+  }
 }
 
 .rich-checkbox__label {
@@ -44,26 +60,6 @@
   opacity: 0;
 }
 
-.rich-checkbox__checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 19px;
-  height: 19px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-}
-
-.rich-checkbox__checkmark::after {
-  position: absolute;
-  display: none;
-  content: "";
-}
-
-.rich-checkbox__label input:checked ~ .rich-checkbox__checkmark::after {
-  display: block;
-}
-
 .rich-checkbox__label .rich-checkbox__checkmark::after {
   top: 4px;
   left: 5px;
@@ -74,4 +70,8 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.rich-checkbox__label input:checked ~ .rich-checkbox__checkmark::after {
+  display: block;
 }

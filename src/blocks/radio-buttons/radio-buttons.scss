@@ -1,5 +1,15 @@
 @import '../../style/color.scss';
 
+.radio-buttons__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 50%;
+}
+
 .radio-buttons__input {
   position: absolute;
   z-index: -1;
@@ -24,14 +34,4 @@
 .radio-buttons__item {
   position: relative;
   padding: 0 21px 0 30px;
-}
-
-.radio-buttons__circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid $dark-shade-25;
-  border-radius: 50%;
 }

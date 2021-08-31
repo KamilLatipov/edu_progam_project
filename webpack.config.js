@@ -25,10 +25,12 @@ module.exports = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        loader: [
+        use: [
+          'style-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
+          'postcss-loader',
+          'sass-loader'
         ],
       },
       {
@@ -36,6 +38,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+          'postcss-loader',
         ],
       },
       {
